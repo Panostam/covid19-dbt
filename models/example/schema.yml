@@ -3,9 +3,12 @@ version: 2
 
 models:
     - name: confirmed_cases
-      description: "A starter dbt model"
+      description: "A model that counts confirmed cases"
+      meta:
+        mappings:
+          eventTimestamp: "date"
       columns:
-          - name: id
+          - name: total_cases_worldwide
             description: "The primary key for this table"
             tests:
                 - unique
