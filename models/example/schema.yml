@@ -5,8 +5,7 @@ models:
     - name: confirmed_cases
       description: "A model that counts confirmed cases"
       meta:
-        mappings:
-          eventTimestamp: "date"
+        
         measures:
           total_confirmed_cases:
             aggregation: sum
