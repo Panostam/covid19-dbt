@@ -15,5 +15,3 @@ models:
       columns:
           - name: total_cases_worldwide
             
-
-                
