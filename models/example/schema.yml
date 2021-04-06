@@ -7,9 +7,13 @@ models:
       meta:
         mappings:
           eventTimestamp: "date"
+        measures:
+          total_confirmed_cases:
+            aggregation: sum
+            
+
       columns:
           - name: total_cases_worldwide
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+            
+
+                
