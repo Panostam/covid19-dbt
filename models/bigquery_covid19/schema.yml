@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: test2
+  - name: total_cases_worldwide
     description: 'Covid19 Public Bigquery data'  
     columns:
       - name: total_cases_worldwide
