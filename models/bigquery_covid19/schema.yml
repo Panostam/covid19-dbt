@@ -1,10 +1,15 @@
 version: 2
 
 models:
-  - name: total_confirmed_cases_by_day1
+  - name: total_confirmed_cases_by_day2
     description: 'Covid19 Public Bigquery data'
     meta:
       eventTimestamp: "date"  
     columns:
-      - name: total_cases_worldwide
+      - name: country_name
+      - name: new_confirmed
+      - name: new_deceased
+      - name: cumulative_confirmed
+      - name: cumlative_deceased
+      - name: cumulative_tested
       
