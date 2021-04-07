@@ -1,10 +1,17 @@
 version: 2
 
-sources:
-  - name: biquery-public-data
+models:
+  - name: covid19_first
     description: 'Covid19 Public Bigquery data'
-    database: biquery-public-data
-    schema: dbt_panos_covid 
-    tables:
-      - name: covid19_open_data
+    meta:
+    measures: 
+      new_confirmed:
+        aggregation: sum
+      new_deceased:
+        aggregation: sum
+    columns:
+      -name: country_name
+      -name: date
+
+    
       
