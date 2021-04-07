@@ -12,6 +12,3 @@ models:
     columns:
       - name: country_name
       - name: date
-
-    
-      
