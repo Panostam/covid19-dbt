@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: covid19_first
+  - name: covid19_data
     description: 'Covid19 Public Bigquery data'
     meta:
     measures: 
