@@ -4,11 +4,12 @@ models:
   - name: covid19_data
     description: 'Covid19 Public Bigquery data'
     meta:
-    measures: 
-      new_confirmed:
-        aggregation: sum
-      new_deceased:
-        aggregation: sum
+    
+      measures: 
+        new_confirmed:
+          aggregation: count
+        new_deceased:
+          aggregation: count
     columns:
       - name: country_name
       - name: date
