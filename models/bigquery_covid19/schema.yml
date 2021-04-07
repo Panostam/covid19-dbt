@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: covid19_data2
+  - name: confirmed_cases_covid
     description: 'Covid19 Public Bigquery data'
     meta:
     
