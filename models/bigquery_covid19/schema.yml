@@ -7,4 +7,8 @@ models:
       - name: total_cases_worldwide
       - name: date
       
-      
+  - name: us_deaths_per_state
+    description: 'Total deaths per state'
+    columns: 
+      - name: state
+      - name: death_count
