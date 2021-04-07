@@ -10,8 +10,8 @@ models:
       new_deceased:
         aggregation: sum
     columns:
-      -name: country_name
-      -name: date
+      - name: country_name
+      - name: date
 
     
       
