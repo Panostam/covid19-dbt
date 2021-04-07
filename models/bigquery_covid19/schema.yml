@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: biquery-public-data
+    description: 'Covid19 Public Bigquery data'
+    database: biquery-public-data
+    schema: dbt_panos_covid 
+    tables:
+      - name: covid19_open_data
+      
