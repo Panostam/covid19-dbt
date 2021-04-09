@@ -3,12 +3,8 @@ version: 2
 models:
   - name: try1
     description: 'Covid19 Public Bigquery data'  
-    columns:
-      - name: total_cases_worldwide
-      - name: date
+    measures:
+      new_confrirmed : 
+        sql: new_confirmed
+        aggregation: sum 
       
-  - name: us_deaths_per_state12
-    description: 'Total deaths per state'
-    columns: 
-      - name: state
-      - name: death_count
