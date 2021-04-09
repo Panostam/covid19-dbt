@@ -1,13 +1,13 @@
 version: 2
 
 models:
-  - name: total_cases_worldwide12
+  - name: try1
     description: 'Covid19 Public Bigquery data'  
     columns:
       - name: total_cases_worldwide
       - name: date
       
-  - name: us_deaths_per_state1
+  - name: us_deaths_per_state12
     description: 'Total deaths per state'
     columns: 
       - name: state
