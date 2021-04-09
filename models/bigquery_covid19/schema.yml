@@ -8,5 +8,8 @@ models:
         total_new_confrirmed:
           sql: new_confirmed 
           aggregation: sum
+        total_new_deceased:
+          sql: new_deceased 
+          aggregation: sum
     columns:
       - name: country_name
