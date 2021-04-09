@@ -11,5 +11,19 @@ models:
         total_new_deceased:
           sql: new_deceased 
           aggregation: sum
+        total_vaccinated:
+          sql: new_persons_vaccinated 
+          aggregation: sum
+        total_fully_vaccinated:
+          sql: new_persons_fully_vaccinated 
+          aggregation: sum
+        total_vaccine_doses_administered:
+          sql: new_vaccine_doses_administered 
+          aggregation: sum
     columns:
       - name: country_name
+      - name: cumulative_confirmed
+      - name: cumulative_deceased
+      - name: cumulative_tested
+      - name: cumulative_vaccinated
+      - name: cumulative_persons_fully_vaccinated
