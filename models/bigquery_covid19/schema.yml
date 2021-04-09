@@ -1,11 +1,12 @@
 version: 2
 
 models:
-  - name: try7
+  - name: try8
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
-        new_confrirmed: 
-          aggregation: sum 
+        new_confrirmed:
+          sql: new_confrirmed 
+          aggregation: sum
     columns:
       - name: country_name
