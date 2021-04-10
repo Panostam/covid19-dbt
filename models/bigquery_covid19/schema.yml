@@ -31,4 +31,3 @@ models:
         meta:
           type: 'date'
           timeframes: 'year'
-
