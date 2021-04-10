@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: try12
+  - name: try13
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
@@ -28,3 +28,7 @@ models:
       - name: cumulative_vaccinated
       - name: cumulative_persons_fully_vaccinated
       - name: date
+        meta:
+          type: date
+          timeframes: year
+
