@@ -30,4 +30,3 @@ models:
       - name: date
         meta:
           type: 'date'
-          timeframes: year
