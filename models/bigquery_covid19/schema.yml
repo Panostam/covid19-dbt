@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: try15
+  - name: try16
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
@@ -20,6 +20,15 @@ models:
         total_vaccine_doses_administered:
           sql: new_vaccine_doses_administered 
           aggregation: sum
+        total_recovered:
+          sql: new_recovered 
+          aggregation: sum
+        total_hospitalized_patients:
+          sql: new_hospitalized_patients 
+          aggregation: sum
+        total_intensive_care_patients:
+          sql: new_intensive_care_patients
+          aggregation: sum  
     columns:
       - name: country_name
       - name: cumulative_confirmed
@@ -30,3 +39,4 @@ models:
       - name: date
         meta:
           type: 'timestamp'
+      - name: cumulative_recovered
