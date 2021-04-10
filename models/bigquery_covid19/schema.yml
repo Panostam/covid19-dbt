@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: try13
+  - name: try14
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
@@ -30,5 +30,5 @@ models:
       - name: date
         meta:
           type: 'date'
-          #timeframes: year
+          timeframes: 'year'
 
