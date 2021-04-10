@@ -29,6 +29,6 @@ models:
       - name: cumulative_persons_fully_vaccinated
       - name: date
         meta:
-          type: date
-          timeframes: year
+        type: date
+        timeframes: year
 
