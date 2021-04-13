@@ -42,7 +42,8 @@ models:
     columns:
       - name: country_name
         meta:
-          type: 'string'
+          dimension:
+            type: 'string'
       - name: date
         meta:
           dimension:
