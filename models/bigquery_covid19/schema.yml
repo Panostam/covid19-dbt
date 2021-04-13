@@ -152,7 +152,52 @@ models:
         hospitalized_patients_aged_90_to_99:
           column: new_hospitalized_patients_age_9
           aggregation: sum
-          category: hospitalized_patients           
+          category: hospitalized_patients
+
+        total_intensive_care_patients:
+          column: new_intensive_care_patients
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_0_to_9:
+          column: new_intensive_care_patients_age_0
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_10_to_19:
+          column: new_intensive_care_patients_age_1
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_20_to_29:
+          column: new_intensive_care_patients_age_2
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_30_to_39:
+          column: new_intensive_care_patients_age_3
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_40_to_49:
+          column: new_intensive_care_patients_age_4
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_50_to_59:
+          column: new_intensive_care_patients_age_5
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_60_to_69:
+          column: new_intensive_care_patients_age_6
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_70_to_79:
+          column: new_intensive_care_patients_age_7
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_80_to_89:
+          column: new_intensive_care_patients_age_8
+          aggregation: sum
+          category: intensive_care_patients
+        intensive_care_patients_aged_90_to_99:
+          column: new_intensive_care_patients_age_9
+          aggregation: sum
+          category: intensive_care_patients           
 
     
 
@@ -174,9 +219,7 @@ models:
           column: new_recovered 
           aggregation: sum
         
-        total_intensive_care_patients:
-          column: new_intensive_care_patients
-          aggregation: sum 
+         
     
     columns:
       - name: country_name
