@@ -41,8 +41,8 @@ models:
     
     columns:
       - name: country_name
-        meta:
-          type: string
+        #meta:
+          #type: string
         meta:
           type: 'timestamp'
       - name: cumulative_recovered
