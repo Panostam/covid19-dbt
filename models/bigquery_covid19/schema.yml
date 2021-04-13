@@ -477,3 +477,12 @@ models:
         meta:
           dimension:
             type: 'timestamp'
+      - name: school_closing
+        meta:
+          dimension:
+            type: 'string'
+
+
+
+
+
