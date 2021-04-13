@@ -5,15 +5,15 @@ models:
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
-        gdp_usd:
-          column: gdp_usd 
-          aggregation: average
-          report_options:
-            format_numbers: $0,0         
-        smoking_prevelance:
-          column: smoking_prevelance
-          category: prevelance
-          aggregation: average
+        #gdp_usd:
+          #column: gdp_usd 
+          #aggregation: average
+          #report_options:
+            #format_numbers: $0,0         
+        #smoking_prevelance:
+          #column: smoking_prevelance
+          #category: prevelance
+          #aggregation: average
         total_new_confrirmed:
           column: new_confirmed 
           aggregation: sum
