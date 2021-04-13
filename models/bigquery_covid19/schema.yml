@@ -290,6 +290,15 @@ models:
           aggregation: sum
           category: recovered_patients
 
+        
+        total_population_male:
+          column: population_male
+          aggregation: average
+          category: gender_specific_properties
+        total_population_female:
+          column: population_female
+          aggregation: average
+          category: gender_specific_properties
         total_male_patients_tested:
           column: new_tested_male
           aggregation: sum
@@ -348,11 +357,12 @@ models:
         gdp_usd:
           column: gdp_usd 
           aggregation: average
+          category: country_specific_properties
           reportOptions:
             suffix: $         
         smoking_prevalence:
           column: smoking_prevalence
-          category: prevalence
+          category: country_specific_properties
           aggregation: average
        
         
