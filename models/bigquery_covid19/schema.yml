@@ -352,51 +352,51 @@ models:
         gdp_usd:
           column: gdp_usd 
           aggregation: average
-          category: country_specific_properties
+          category: country_specific_indices
           reportOptions:
             suffix: $
         gdp_per_capita:
           column: gdp_per_capita_usd 
           aggregation: average
-          category: country_specific_properties
+          category: country_specific_indices
           reportOptions:
             suffix: $          
         smoking_prevalence_index:
           column: smoking_prevalence
-          category: country_specific_properties
+          category: country_specific_indices
           aggregation: average
         diabetes_prevalence_index:
           column: diabetes_prevalence
-          category: country_specific_properties
+          category: country_specific_indices
           aggregation: average
         infant_mortality_rate:
           column: infant_mortality_rate
-          category: country_specific_properties
+          category: country_specific_indices
           aggregation: average
         nurses_per_1000_people:
           column: nurse_per_1000
-          category: country_specific_properties
+          category: country_specific_indices
           aggregation: average
         physicians_per_1000_people:
           column: physicians_per_1000
-          category: country_specific_properties
+          category: country_specific_indices
           aggregation: average
         health_expenditure:
           column: health_expenditure_usd 
           aggregation: average
-          category: country_specific_properties
+          category: country_specific_indices
           reportOptions:
             suffix: $
         out_of_pocket_health_expenditure:
           column: out_of_pocket_health_expenditure_usd 
           aggregation: average
-          category: country_specific_properties
+          category: country_specific_indices
           reportOptions:
             suffix: $
         human_development_index:
           column: human_development_index
           aggregation: average
-          category: country_specific_properties
+          category: country_specific_indices
         
        
         
