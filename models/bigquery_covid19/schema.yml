@@ -8,7 +8,7 @@ models:
         gdp_usd:
           column: gdp_usd 
           aggregation: average
-          #report_options:
+          report_options:
             #format_numbers: $0,0         
         smoking_prevelance:
           column: smoking_prevelance
@@ -43,5 +43,6 @@ models:
       - name: country_name
         meta:
           type: 'string'
+      - mame: date
         meta:
           type: 'timestamp'
