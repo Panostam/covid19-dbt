@@ -43,6 +43,6 @@ models:
       - name: country_name
         meta:
           type: 'string'
-      - mame: date
+      - name: date
         meta:
           type: 'timestamp'
