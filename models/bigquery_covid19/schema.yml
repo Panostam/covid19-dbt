@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: try1
+  - name: try25
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
