@@ -1,42 +1,48 @@
 version: 2
 
 models:
-  - name: try16
+  - name: try1
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
+        gdp_usd:
+          column: gdp_usd 
+          aggregation: average
+          report_options:
+            format_numbers: $0,0         
+        smoking_prevelance:
+          column: smoking_prevelance
+          category: prevelance
+          aggregation: average
         total_new_confrirmed:
-          sql: new_confirmed 
+          column: new_confirmed 
           aggregation: sum
         total_new_deceased:
-          sql: new_deceased 
+          column: new_deceased 
           aggregation: sum
         total_vaccinated:
-          sql: new_persons_vaccinated 
+          column: new_persons_vaccinated 
           aggregation: sum
         total_fully_vaccinated:
-          sql: new_persons_fully_vaccinated 
+          column: new_persons_fully_vaccinated 
           aggregation: sum
         total_vaccine_doses_administered:
-          sql: new_vaccine_doses_administered 
+          column: new_vaccine_doses_administered 
           aggregation: sum
         total_recovered:
-          sql: new_recovered 
+          column: new_recovered 
           aggregation: sum
         total_hospitalized_patients:
-          sql: new_hospitalized_patients 
+          column: new_hospitalized_patients 
           aggregation: sum
         total_intensive_care_patients:
-          sql: new_intensive_care_patients
-          aggregation: sum  
+          column: new_intensive_care_patients
+          aggregation: sum 
+    
     columns:
       - name: country_name
-      - name: cumulative_confirmed
-      - name: cumulative_deceased
-      - name: cumulative_tested
-      - name: cumulative_vaccinated
-      - name: cumulative_persons_fully_vaccinated
-      - name: date
+        meta:
+          type: string
         meta:
           type: 'timestamp'
       - name: cumulative_recovered
