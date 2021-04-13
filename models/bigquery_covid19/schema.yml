@@ -45,4 +45,5 @@ models:
           type: 'string'
       - name: date
         meta:
-          type: 'timestamp'
+          dimension:
+            type: 'timestamp'
