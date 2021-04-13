@@ -393,6 +393,11 @@ models:
           category: country_specific_properties
           reportOptions:
             suffix: $
+        human_development_index:
+          column: human_development_index
+          aggregation: average
+          category: country_specific_properties
+        
        
         
         
