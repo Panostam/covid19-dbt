@@ -382,6 +382,18 @@ models:
           column: physicians_per_1000
           category: country_specific_properties
           aggregation: average
+        health_expenditure:
+          column: health_expenditure_usd 
+          aggregation: average
+          category: country_specific_properties
+          reportOptions:
+            suffix: $
+        out_of_pocket_health_expenditure:
+          column: out_of_pocket_health_expenditure_usd 
+          aggregation: average
+          category: country_specific_properties
+          reportOptions:
+            suffix: $
        
         
         
