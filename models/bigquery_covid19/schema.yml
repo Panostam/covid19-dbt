@@ -6,8 +6,7 @@ models:
     meta:   
       measures:
         gdp_usd:
-          column: gdp_usd
-          type: integer 
+          column: gdp_usd 
           aggregation: average
           reportOptions:
             suffix: $         
@@ -43,7 +42,7 @@ models:
     columns:
       - name: country_name
         meta:
-          type: 'string'
+          type: string
       - name: date
         meta:
-          type: 'timestamp'
+          type: timestamp
