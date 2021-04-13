@@ -288,7 +288,59 @@ models:
         recovered_patients_aged_90_to_99:
           column: new_recovered_age_9
           aggregation: sum
-          category: recovered_patients                                                                      
+          category: recovered_patients
+
+        Total_male_patients_tested:
+          column: new_tested_male
+          aggregation: sum
+          category: gender_specific_properties
+        Total_female_patients_tested:
+          column: new_tested_female
+          aggregation: sum
+          category: gender_specific_properties
+        Total_male_patients_deceased:
+          column: new_deceased_male
+          aggregation: sum
+          category: gender_specific_properties
+        Total_female_patients_deceased:
+          column: new_deceased_female
+          aggregation: sum
+          category: gender_specific_properties
+        Total_male_patients_confirmed:
+          column: new_confirmed_male
+          aggregation: sum
+          category: gender_specific_properties
+        Total_female_patients_confirmed:
+          column: new_confirmed_female
+          aggregation: sum
+          category: gender_specific_properties
+        Total_male_patients_hospitalized:
+          column: new_hospitalized_patients_male
+          aggregation: sum
+          category: gender_specific_properties
+        Total_female_patients_hospitalized:
+          column: new_hospitalized_patients_female
+          aggregation: sum
+          category: gender_specific_properties
+        Total_intensive_care_male_patients:
+          column: new_intensive_care_patients_male
+          aggregation: sum
+          category: gender_specific_properties
+        Total_intensive_care_female_patients:
+          column: new_intensive_care_patients_female
+          aggregation: sum
+          category: gender_specific_properties
+        Total_male_patients_recovered:
+          column: new_recovered_male
+          aggregation: sum
+          category: gender_specific_properties
+        Total_female_patients_recovered:
+          column: new_recovered_female
+          aggregation: sum
+          category: gender_specific_properties
+
+
+
 
     
 
