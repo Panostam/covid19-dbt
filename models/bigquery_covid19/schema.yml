@@ -397,6 +397,65 @@ models:
           column: human_development_index
           aggregation: average
           category: country_specific_indices
+
+
+        total_population:
+          column: population
+          aggregation: average
+          category: country_population_properties
+        total_population_rural_areas:
+          column: population_rural
+          aggregation: average
+          category: country_population_properties
+        total_population_urban_areas:
+          column: population_urban
+          aggregation: average
+          category: country_population_properties
+        population_density:
+          column: population_density
+          aggregation: average
+          category: country_population_properties
+        population_aged_0_to_9_years:
+          column: population_age_00_09
+          aggregation: average
+          category: country_population_properties
+        population_aged_10_to_19_years:
+          column: population_age_10_19
+          aggregation: average
+          category: country_population_properties
+        population_aged_20_to_29_years:
+          column: population_age_20_29
+          aggregation: average
+          category: country_population_properties
+        population_aged_30_to_39_years:
+          column: population_age_30_39
+          aggregation: average
+          category: country_population_properties
+        population_aged_40_to_49_years:
+          column: population_age_40_49
+          aggregation: average
+          category: country_population_properties
+        population_aged_50_to_59_years:
+          column: population_age_50_59
+          aggregation: average
+          category: country_population_properties
+        population_aged_60_to_69_years:
+          column: population_age_60_69
+          aggregation: average
+          category: country_population_properties
+        population_aged_70_to_79_years:
+          column: population_age_70_79
+          aggregation: average
+          category: country_population_properties
+        population_aged_80_to_89_years:
+          column: population_age_80_89
+          aggregation: average
+          category: country_population_properties
+        population_aged_90_to_99_years:
+          column: population_age_90_99
+          aggregation: average
+          category: country_population_properties
+
         
        
         
