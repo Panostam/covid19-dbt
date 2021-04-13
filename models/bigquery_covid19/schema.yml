@@ -359,9 +359,27 @@ models:
           aggregation: average
           category: country_specific_properties
           reportOptions:
-            suffix: $         
+            suffix: $
+        gdp_per_capita:
+          column: gdp_per_capita_usd 
+          aggregation: average
+          category: country_specific_properties
+          reportOptions:
+            suffix: $          
         smoking_prevalence:
           column: smoking_prevalence
+          category: country_specific_properties
+          aggregation: average
+        infant_mortality_rate:
+          column: infant_mortality_rate
+          category: country_specific_properties
+          aggregation: average
+        nurses_per_1000_people:
+          column: nurse_per_1000
+          category: country_specific_properties
+          aggregation: average
+        physicians_per_1000_people:
+          column: physicians_per_1000
           category: country_specific_properties
           aggregation: average
        
