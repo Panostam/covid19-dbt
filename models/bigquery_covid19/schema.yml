@@ -366,8 +366,12 @@ models:
           category: country_specific_properties
           reportOptions:
             suffix: $          
-        smoking_prevalence:
+        smoking_prevalence_index:
           column: smoking_prevalence
+          category: country_specific_properties
+          aggregation: average
+        diabetes_prevalence_index:
+          column: diabetes_prevalence
           category: country_specific_properties
           aggregation: average
         infant_mortality_rate:
