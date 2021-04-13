@@ -349,11 +349,6 @@ models:
           category: gender_specific_properties
 
 
-
-
-    
-
-
         gdp_usd:
           column: gdp_usd 
           aggregation: average
