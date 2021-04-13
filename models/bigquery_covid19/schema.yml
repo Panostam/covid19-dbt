@@ -6,7 +6,8 @@ models:
     meta:   
       measures:
         gdp_usd:
-          column: gdp_usd 
+          column: gdp_usd
+          type: integer 
           aggregation: average
           reportOptions:
             suffix: $         
