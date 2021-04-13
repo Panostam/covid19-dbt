@@ -40,9 +40,9 @@ models:
           aggregation: sum 
     
     columns:
-      - name: country_name
-        meta:
-          type: 'string'
+      #- name: country_name
+        #meta:
+          #type: 'string'
       - name: date
         meta:
           type: 'timestamp'
