@@ -5,6 +5,16 @@ models:
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
+        total_confirmed_cases_worldwide:
+          column: new_confirmed
+          aggregation: sum
+          category: Confirmed_cases
+
+        total_confirmed_ages_0-9_years:
+          column: new_confirmed_age_0
+          aggregation: sum
+          category: Confirmed_cases
+                  
         gdp_usd:
           column: gdp_usd 
           aggregation: average
@@ -14,9 +24,7 @@ models:
           column: smoking_prevalence
           category: prevalence
           aggregation: average
-        total_new_confrirmed:
-          column: new_confirmed 
-          aggregation: sum
+       
         total_new_deceased:
           column: new_deceased 
           aggregation: sum
