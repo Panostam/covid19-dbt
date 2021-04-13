@@ -100,27 +100,27 @@ models:
         total_people_deceased:
           column: new_deceased
           aggregation: sum
-          category: Deceased 
+          category: Deceased_patients 
         deceased_people_aged_0_to_9:
           column: new_deceased_age_0
           aggregation: sum
-          category: Deceased 
+          category: Deceased_patients  
         deceased_people_aged_10_to_19:
           column: new_deceased_age_1
           aggregation: sum
-          category: Deceased
+          category: Deceased_patients 
         deceased_people_aged_20_to_29:
           column: new_deceased_age_2
           aggregation: sum
-          category: Deceased
+          category: Deceased_patients 
         deceased_people_aged_30_to_39:
           column: new_deceased_age_3
           aggregation: sum
-          category: Deceased
+          category: Deceased_patients 
         deceased_people_aged_40_to_49:
           column: new_deceased_age_4
           aggregation: sum
-          category: Deceased
+          category: Deceased_patients 
         deceased_people_aged_50_to_59:
           column: new_deceased_age_5
           aggregation: sum
@@ -128,32 +128,32 @@ models:
         deceased_people_aged_60_to_69:
           column: new_deceased_age_6
           aggregation: sum
-          category: Deceased
+          category: Deceased_patients 
         deceased_people_aged_70_to_79:
           column: new_deceased_age_7
           aggregation: sum
-          category: Deceased
+          category: Deceased_patients 
         deceased_people_aged_80_to_89:
           column: new_deceased_age_8
           aggregation: sum
-          category: Deceased
+          category: Deceased_patients 
         deceased_people_aged_90_to_99:
           column: new_deceased_age_9
           aggregation: sum
-          category: Deceased
+          category: Deceased_patients 
 
         total_vaccinated:
           column: new_persons_vaccinated 
           aggregation: sum
-          category: vaccination
+          category: vaccinated
         total_fully_vaccinated:
           column: new_person_fully_vaccinated 
           aggregation: sum
-          category: vaccination
+          category: vaccinated
         total_vaccine_doses_admininstered:
           column: new_vaccine_doses_administered
           aggregation: sum
-          category: vaccination
+          category: vaccinated
 
         total_hospitalized_patients:
           column: new_hospitalized_patients
