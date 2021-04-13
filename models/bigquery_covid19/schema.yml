@@ -5,6 +5,52 @@ models:
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
+        total_tested_patients:
+          column: new_tested
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_0_to_9_years:
+          column: new_tested_age_0
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_10_to_19_years:
+          column: new_tested_age_1
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_20_to_29_years:
+          column: new_tested_age_2
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_30_to_39_years:
+          column: new_tested_age_3
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_40_to_49_years:
+          column: new_tested_age_4
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_50_to_59_years:
+          column: new_tested_age_5
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_60_to_69_years:
+          column: new_tested_age_6
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_70_to_79_years:
+          column: new_tested_age_7
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_80_to_89_years:
+          column: new_tested_age_8
+          aggregation: sum
+          category: tested_patients
+        tested_patients_aged_90_to_99_years:
+          column: new_tested_age_9
+          aggregation: sum
+          category: tested_patients
+
+
         total_confirmed_cases:
           column: new_confirmed
           aggregation: sum
@@ -260,9 +306,6 @@ models:
         
         
         
-        total_recovered:
-          column: new_recovered 
-          aggregation: sum
         
          
     
