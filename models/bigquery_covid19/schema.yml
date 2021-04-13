@@ -10,7 +10,7 @@ models:
           aggregation: sum
           category: Confirmed_cases
 
-        Confirmed_cases_aged_0_to_9_years:
+        confirmed_cases_aged_0_to_9_years:
           column: new_confirmed_age_0
           aggregation: sum
           category: Confirmed_cases
