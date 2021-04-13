@@ -45,4 +45,4 @@ models:
           #type: string
       - name: date
         meta:
-          type: 'timestamp'
+          type: timestamp
