@@ -1,36 +1,7 @@
 version: 2
 
 models:
-  - name: try
-    description: 'Covid19 Public Bigquery data'
-    meta:   
-      measures:
-        total_new_confrirmed:
-          column: new_confirmed 
-          aggregation: sum
-        total_new_deceased:
-          column: new_deceased 
-          aggregation: sum
-        total_vaccinated:
-          column: new_persons_vaccinated 
-          aggregation: sum
-        total_fully_vaccinated:
-          column: new_persons_fully_vaccinated 
-          aggregation: sum
-        total_vaccine_doses_administered:
-          column: new_vaccine_doses_administered 
-          aggregation: sum
-        total_recovered:
-          column: new_recovered 
-          aggregation: sum
-        total_hospitalized_patients:
-          column: new_hospitalized_patients 
-          aggregation: sum
-        total_intensive_care_patients:
-          column: new_intensive_care_patients
-          aggregation: sum 
-    
+  - name: try25
+    description: 'Covid19 Public Bigquery data'    
     columns:
       - name: date
-        meta:
-          type: 'timestamp'
