@@ -9,11 +9,46 @@ models:
           column: new_confirmed
           aggregation: sum
           category: Confirmed_cases
-
         confirmed_cases_aged_0_to_9_years:
           column: new_confirmed_age_0
           aggregation: sum
           category: Confirmed_cases
+        confirmed_cases_aged_10_to_19_years:
+          column: new_confirmed_age_1
+          aggregation: sum
+          category: Confirmed_cases
+        confirmed_cases_aged_20_to_29_years:
+          column: new_confirmed_age_2
+          aggregation: sum
+          category: Confirmed_cases
+        confirmed_cases_aged_30_to_39_years:
+          column: new_confirmed_age_3
+          aggregation: sum
+          category: Confirmed_cases
+        confirmed_cases_aged_40_to_49_years:
+          column: new_confirmed_age_4
+          aggregation: sum
+          category: Confirmed_cases
+        confirmed_cases_aged_50_to_59_years:
+          column: new_confirmed_age_5
+          aggregation: sum
+          category: Confirmed_cases
+        confirmed_cases_aged_60_to_69_years:
+          column: new_confirmed_age_6
+          aggregation: sum
+          category: Confirmed_cases
+        confirmed_cases_aged_70_to_79_years:
+          column: new_confirmed_age_7
+          aggregation: sum
+          category: Confirmed_cases
+        confirmed_cases_aged_80_to_89_years:
+          column: new_confirmed_age_8
+          aggregation: sum
+          category: Confirmed_cases
+        confirmed_cases_aged_90_to_99_years:
+          column: new_confirmed_age_9
+          aggregation: sum
+          category: Confirmed_cases      
                   
         gdp_usd:
           column: gdp_usd 
