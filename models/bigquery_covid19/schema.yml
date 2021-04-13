@@ -5,12 +5,12 @@ models:
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
-        total_confirmed_cases_worldwide:
+        total_confirmed_cases:
           column: new_confirmed
           aggregation: sum
           category: Confirmed_cases
 
-        total_confirmed_ages_0_to_9_years:
+        Confirmed_cases_aged_0_to_9_years:
           column: new_confirmed_age_0
           aggregation: sum
           category: Confirmed_cases
