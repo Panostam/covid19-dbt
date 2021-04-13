@@ -8,8 +8,8 @@ models:
         gdp_usd:
           column: gdp_usd 
           aggregation: average
-          report_options:
-            format_numbers: $0,0         
+          #report_options:
+            #format_numbers: $0,0         
         smoking_prevelance:
           column: smoking_prevelance
           category: prevelance
@@ -41,8 +41,7 @@ models:
     
     columns:
       - name: country_name
-        #meta:
-          #type: 'string'
+        meta:
+          type: 'string'
         meta:
           type: 'timestamp'
-      - name: cumulative_recovered
