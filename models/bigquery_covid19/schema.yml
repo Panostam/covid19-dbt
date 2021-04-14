@@ -401,6 +401,10 @@ models:
           column: human_development_index
           aggregation: average
           category: country_specific_indices
+        stringency_index:
+          column: stringency_index
+          aggregation: average
+          category: country_specific_indices
 
 
         total_population:
