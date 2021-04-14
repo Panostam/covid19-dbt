@@ -159,7 +159,7 @@ models:
           aggregation: sum
           category: vaccinated
         total_fully_vaccinated:
-          column: new_person_fully_vaccinated 
+          column: new_persons_fully_vaccinated 
           aggregation: sum
           category: vaccinated
         total_vaccine_doses_admininstered:
