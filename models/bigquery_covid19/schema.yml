@@ -11,7 +11,7 @@ models:
           sql: sum(new_deceased)/avg(population)
           reportOptions:
             suffix: '%'
-        percentage_of_people_vaccinamted:
+        percentage_of_people_vaccinated:
           sql: sum(new_persons_vaccinated)/avg(population)
           reportOptions:
             suffix: '%'
