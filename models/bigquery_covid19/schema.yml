@@ -295,6 +295,14 @@ models:
           column: population_male
           aggregation: average
           category: gender_specific_properties
+        adult_male_mortality_rate:
+          column: adult_male_mortality_rate
+          aggregation: average
+          category: gender_specific_properties
+        adult_female_mortality_rate:
+          column: adult_female_mortality_rate
+          aggregation: average
+          category: gender_specific_properties
         total_population_female:
           column: population_female
           aggregation: average
@@ -405,10 +413,26 @@ models:
           column: stringency_index
           aggregation: average
           category: country_specific_indices
+        human_capital_index:
+          column: human_capital_index
+          aggregation: average
+          category: country_specific_indices
+        life_expectancy:
+          column: life_expectancy
+          aggregation: average
+          category: country_specific_indices
+        pollution_mortality_rate:
+          column: pollution_mortality_rate
+          aggregation: average
+          category: country_specific_indices
 
 
         total_population:
           column: population
+          aggregation: average
+          category: country_population_properties
+        population_in_the_largest_city:
+          column: population_largest_city
           aggregation: average
           category: country_population_properties
         total_population_rural_areas:
