@@ -481,6 +481,8 @@ models:
         meta:
           dimension:
             type: 'integer'
+            report:
+              suffix: 'level'
 
 
 
