@@ -467,7 +467,41 @@ models:
           category: country_climate_properties
           reportOptions:
             suffix: °C
-        
+        minimum_temperature:
+          column: minimum_temperature_celsius
+          aggregation: average
+          category: country_climate_properties
+          reportOptions:
+            suffix: °C
+        maximum_temperature:
+          column: maximum_temperature_celsius
+          aggregation: average
+          category: country_climate_properties
+          reportOptions:
+            suffix: °C
+        rainfall:
+          column: rainfall_mm
+          aggregation: average
+          category: country_climate_properties
+          reportOptions:
+            suffix: mm
+        snowfall:
+          column: snowfall_mm
+          aggregation: average
+          category: country_climate_properties
+          reportOptions:
+            suffix: mm
+        dew_point:
+          column: dew_point
+          aggregation: average
+          category: country_climate_properties
+          reportOptions:
+            suffix: °C
+        relative_humidity:
+          column: relative_humidity
+          aggregation: average
+          category: country_climate_properties
+          
 
         
        
