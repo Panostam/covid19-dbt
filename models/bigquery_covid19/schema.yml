@@ -459,6 +459,14 @@ models:
           column: population_age_80_and_older
           aggregation: average
           category: country_population_properties
+
+
+        average_temperature:
+          column: average_temperature_celcius
+          aggregation: average
+          category: country_climate_properties
+          reportOptions:
+            prefix: °C
         
 
         
