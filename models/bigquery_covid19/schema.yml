@@ -491,13 +491,19 @@ models:
           dimension:
             type: 'integer'
             category: counntry_imposed_restrictions
-            label: 'Event cancellation Level'
+            label: 'Event Cancellation Level'
       - name: restrictions_on_gatherings
         meta:
           dimension:
             type: 'integer'
             category: counntry_imposed_restrictions
-            label: 'Gatherings restriction Level'
+            label: 'Gatherings Restriction Level'
+      - name: stay_at_home_requirements
+        meta:
+          dimension:
+            type: 'integer'
+            category: counntry_imposed_restrictions
+            label: 'Stay at home Requirements Level'
 
 
 
