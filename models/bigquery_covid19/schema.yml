@@ -5,6 +5,10 @@ models:
     description: 'Covid19 Public Bigquery data'
     meta:   
       measures:
+
+        mortality_rate:
+          sql: new_confirmed/new_deceased
+          aggregation: sum
         total_tested_patients:
           column: new_tested
           aggregation: sum
