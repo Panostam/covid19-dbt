@@ -481,7 +481,8 @@ models:
         meta:
           dimension:
             type: 'integer'
-            label: level
+            category: restrictions
+            label: school_closing
 
 
 
