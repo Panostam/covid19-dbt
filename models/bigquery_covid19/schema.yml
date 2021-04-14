@@ -455,14 +455,14 @@ models:
           column: population_age_70_79
           aggregation: average
           category: country_population_properties
-        population_aged_80_abd_older:
+        population_aged_80_and_older:
           column: population_age_80_and_older
           aggregation: average
           category: country_population_properties
 
 
         average_temperature:
-          column: average_temperature_celcius
+          column: average_temperature_celsius
           aggregation: average
           category: country_climate_properties
           reportOptions:
