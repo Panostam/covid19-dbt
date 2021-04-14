@@ -485,7 +485,19 @@ models:
           dimension:
             type: 'integer'
             category: counntry_imposed_restrictions
-            label: 'School Closing Level'
+            label: 'Workplace Closing Level'
+      - name: cancel_public_events
+        meta:
+          dimension:
+            type: 'integer'
+            category: counntry_imposed_restrictions
+            label: 'Event cancellation Level'
+      - name: restrictions_on_gatherings
+        meta:
+          dimension:
+            type: 'integer'
+            category: counntry_imposed_restrictions
+            label: 'Gatherings restriction Level'
 
 
 
