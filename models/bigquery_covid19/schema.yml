@@ -376,8 +376,8 @@ models:
           reportOptions:
             suffix: $
         gdp_per_capita:
-          column: gdp_per_capita_usd 
-          aggregation: average
+          sql: avg(gdp_per_usd)/avg(population) 
+          
           category: country_specific_indices
           reportOptions:
             suffix: $          
