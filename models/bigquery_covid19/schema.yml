@@ -466,7 +466,7 @@ models:
           aggregation: average
           category: country_climate_properties
           reportOptions:
-            prefix: °C
+            suffix: °C
         
 
         
