@@ -6,9 +6,12 @@ models:
     meta:   
       measures:
 
-        mortality_rate:
+        covid_mortality_rate:
           sql: sum(new_deceased)/avg(population)
+          reportOptions:
+            suffix: '%'
           
+
         total_tested_patients:
           column: new_tested
           aggregation: sum
@@ -402,13 +405,13 @@ models:
           aggregation: average
           category: country_specific_indices
           reportOptions:
-            suffix: $
+            prefix: $
         out_of_pocket_health_expenditure:
           column: out_of_pocket_health_expenditure_usd 
           aggregation: average
           category: country_specific_indices
           reportOptions:
-            suffix: $
+            prefix: $
         human_development_index:
           column: human_development_index
           aggregation: average
