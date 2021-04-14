@@ -540,6 +540,42 @@ models:
             type: 'integer'
             category: country_support_measures
             label: 'International Support Level'
+      - name: testing_policy
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_imposed_policies
+            label: 'Testing Policy Level'
+      - name: contact_tracing
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_imposed_policies
+            label: 'Contact Tracing Level'
+      - name: emergency_investment_in_healrthcare
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_imposed_policies
+            label: 'Emergency Investment in Healthcare Level'
+      - name: investment_in_vaccines
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_imposed_policies
+            label: 'Investment in Vaccines Level'
+      - name: facial_coverings
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_imposed_policies
+            label: 'Facial Coverings Level'
+      - name: vaccination_policy
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_imposed_policies
+            label: 'Vaccination Policy Level'
 
 
 
