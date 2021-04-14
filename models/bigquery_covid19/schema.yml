@@ -482,7 +482,7 @@ models:
           dimension:
             type: 'integer'
             category: restrictions
-            label: school_closing
+            label: 'School Closing Level'
 
 
 
