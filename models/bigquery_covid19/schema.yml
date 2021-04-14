@@ -7,8 +7,8 @@ models:
       measures:
 
         mortality_rate:
-          sql: (new_confirmed, '/'',new_deceased)
-          aggregation: sum
+          sql: sum(new_confirmed)/sum(new_deceased)
+          
         total_tested_patients:
           column: new_tested
           aggregation: sum
