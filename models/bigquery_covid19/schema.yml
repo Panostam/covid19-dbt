@@ -503,7 +503,19 @@ models:
           dimension:
             type: 'integer'
             category: counntry_imposed_restrictions
-            label: 'Stay at home Requirements Level'
+            label: 'Stay at Home Requirements Level'
+      - name: restrictions_on_international_movement
+        meta:
+          dimension:
+            type: 'integer'
+            category: counntry_imposed_restrictions
+            label: 'International Movement Restriction Level'
+      - name: international_travel_controls
+        meta:
+          dimension:
+            type: 'integer'
+            category: counntry_imposed_restrictions
+            label: 'International Travel Control Level'
 
 
 
