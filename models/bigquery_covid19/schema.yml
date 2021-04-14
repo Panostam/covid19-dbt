@@ -382,7 +382,7 @@ models:
           category: country_specific_indices
           aggregation: average
         nurses_per_1000_people:
-          column: nurse_per_1000
+          column: nurses_per_1000
           category: country_specific_indices
           aggregation: average
         physicians_per_1000_people:
