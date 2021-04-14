@@ -516,6 +516,30 @@ models:
             type: 'integer'
             category: counntry_imposed_restrictions
             label: 'International Travel Control Level'
+      - name: income_support
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_support_measures
+            label: 'Income Support Level'
+      - name: debt_relief
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_support_measures
+            label: 'Debt Relief Level'
+      - name: fiscal_measures
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_support_measures
+            label: 'Fiscal Measures Level'
+      - name: international_support
+        meta:
+          dimension:
+            type: 'integer'
+            category: country_support_measures
+            label: 'International Support Level'
 
 
 
