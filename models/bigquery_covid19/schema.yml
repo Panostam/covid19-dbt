@@ -124,7 +124,7 @@ models:
         deceased_people_aged_50_to_59:
           column: new_deceased_age_5
           aggregation: sum
-          category: Deceased
+          category: Deceased_patients
         deceased_people_aged_60_to_69:
           column: new_deceased_age_6
           aggregation: sum
