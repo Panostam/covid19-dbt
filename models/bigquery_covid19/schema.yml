@@ -482,7 +482,7 @@ models:
           dimension:
             type: 'integer'
             report:
-              suffix: level
+              prefix: level
 
 
 
