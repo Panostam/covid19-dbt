@@ -451,14 +451,11 @@ models:
           column: population_age_70_79
           aggregation: average
           category: country_population_properties
-        population_aged_80_to_89_years:
-          column: population_age_80_89
+        population_aged_80_abd_older:
+          column: population_age_80_and_older
           aggregation: average
           category: country_population_properties
-        population_aged_90_to_99_years:
-          column: population_age_90_99
-          aggregation: average
-          category: country_population_properties
+        
 
         
        
