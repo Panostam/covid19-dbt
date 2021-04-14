@@ -480,9 +480,8 @@ models:
       - name: school_closing
         meta:
           dimension:
-            type: 'double'
-            report:
-              prefix: level
+            type: 'integer'
+            label: level
 
 
 
