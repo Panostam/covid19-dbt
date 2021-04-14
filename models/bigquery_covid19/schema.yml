@@ -478,7 +478,13 @@ models:
         meta:
           dimension:
             type: 'integer'
-            category: restrictions
+            category: counntry_imposed_restrictions
+            label: 'School Closing Level'
+      - name: workplace_closing
+        meta:
+          dimension:
+            type: 'integer'
+            category: counntry_imposed_restrictions
             label: 'School Closing Level'
 
 
