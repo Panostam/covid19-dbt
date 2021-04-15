@@ -11,11 +11,7 @@ models:
           sql: 100*sum(new_deceased)/avg(population)
           reportOptions:
             suffix: '%'
-        covid_confirmed_rate:
-          description: 'The percentage of people who died by covid in a country'
-          sql: 100*sum(new_confirmed)/avg(population)
-          reportOptions:
-            suffix: '%'
+      
        
         vaccination_index_per_country:
           description: 'Vaccination doses administered normalized by the country population'
