@@ -15,10 +15,11 @@ models:
           sql: 100*sum(new_persons_fully_vaccinated)/avg(population)
           reportOptions:
             suffix: '%'
-        vaccination_index:
+        vaccination_index_per_country:
           description: 'Vaccination doses administered normalized by the country population'
-          sql: sum(new_vaccine_doses_administered)/avg(population)
-          
+          sql: 100*sum(new_persons_fully_vaccinated)/avg(population)
+          reportOptions:
+            suffix: '%'
           
 
         total_tested_patients:
