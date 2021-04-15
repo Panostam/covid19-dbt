@@ -11,10 +11,7 @@ models:
           sql: 100*sum(new_deceased)/avg(population)
           reportOptions:
             suffix: '%'
-        percentage_of_people_vaccinated:
-          sql: 100*sum(new_persons_fully_vaccinated)/avg(population)
-          reportOptions:
-            suffix: '%'
+       
         vaccination_index_per_country:
           description: 'Vaccination doses administered normalized by the country population'
           sql: 100*sum(new_persons_fully_vaccinated)/avg(population)
