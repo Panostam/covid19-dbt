@@ -661,6 +661,12 @@ models:
             type: 'integer'
             category: country_imposed_policies
             label: 'Vaccination Policy Level'
+      - name: aggregation_level
+        meta:
+          description: '0: Country, 1: Province, state, 2: Municipality, county, 3: City or equivelant'
+          dimension:
+            type: 'integer'
+            
 
 
 
