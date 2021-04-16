@@ -14,7 +14,7 @@ models:
 
         deaths_to_confirmed_ratio:
           description: 'Vaccination doses administered normalized by the country population'
-          sql: 100*sum(new_deceased)/sum(coalesce(new_confrimed,0))
+          sql: 100*sum(new_deceased)/sum(coalesce(new_confirmed,0))
 
        
         vaccination_index_per_country:
