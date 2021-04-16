@@ -6,7 +6,7 @@ models:
     meta:   
       measures:
 
-        covid_mortality_rate_deaths_by_population:
+        covid_mortality_rate:
           description: 'The percentage of people who died by covid in a country'
           sql: 100*sum(new_deceased)/avg(population)
           reportOptions:
