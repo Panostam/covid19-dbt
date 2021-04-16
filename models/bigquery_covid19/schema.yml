@@ -14,7 +14,7 @@ models:
 
         percentage_of_deaths_of_infected_people_deaths_by_cases:
           description: 'The percentage of sick people people that actually died of covid'
-          sql: 100*sum(new_deceased)/sum(coalesce(new_confrirmed,0))
+          sql: 100*sum(new_deceased)/sum(coalesce(new_confirmed,0))
           reportOptions:
             suffix: '%'
       
