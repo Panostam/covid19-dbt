@@ -6,13 +6,13 @@ models:
     meta:   
       measures:
 
-        covid_mortality_rate(deaths/population):
+        covid_mortality_rate_deaths_by_population:
           description: 'The percentage of people who died by covid in a country'
           sql: 100*sum(new_deceased)/avg(population)
           reportOptions:
             suffix: '%'
 
-        percentage_of_deaths_of_infected_people(deaths/cases):
+        percentage_of_deaths_of_infected_people_deaths_by_cases:
           description: 'The percentage of sick people people that actually died of covid'
           sql: 100*sum(new_deceased)/avg(coalesce(population,0))
           reportOptions:
