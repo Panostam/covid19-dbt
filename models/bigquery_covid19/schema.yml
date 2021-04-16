@@ -12,11 +12,6 @@ models:
           reportOptions:
             suffix: '%'
 
-        percentage_of_deaths_of_infected_people_deaths_by_cases:
-          description: 'The percentage of sick people people that actually died of covid'
-          sql: 100*sum(new_deceased)/sum(coalesce(new_confirmed,0))
-          reportOptions:
-            suffix: '%'
       
        
         vaccination_index_per_country:
@@ -27,7 +22,7 @@ models:
 
         percentage_of_people_who_got_tested_in_a_country:
           description: 'For comparison of testing between countries'
-          sql: 100*sum(new_tested)/avg(population)
+          sql: 100*sum(new_confirmed)/avg(population)
           reportOptions:
             suffix: '%'
           
