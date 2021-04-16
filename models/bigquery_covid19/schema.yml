@@ -24,6 +24,12 @@ models:
           sql: 100*sum(new_persons_fully_vaccinated)/avg(population)
           reportOptions:
             suffix: '%'
+
+        percentage_of_people_who_got_tested_in_a_country:
+          description: 'For comparison of testing between countries'
+          sql: 100*sum(new_tested)/avg(population)
+          reportOptions:
+            suffix: '%'
           
 
         total_tested_patients:
