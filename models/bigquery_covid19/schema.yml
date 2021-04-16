@@ -12,7 +12,7 @@ models:
           reportOptions:
             suffix: '%'
 
-        Percentage_of_deaths_of_infected_people(Deaths/cases):
+        percentage_of_deaths_of_infected_people(Deaths/cases):
           description: 'The percentage of sick people people that actually died of covid'
           sql: 100*sum(new_deceased)/avg(coalesce(population,0))
           reportOptions:
