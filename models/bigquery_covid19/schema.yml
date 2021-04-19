@@ -73,9 +73,6 @@ models:
           label: 'Debt relief to citizens'
       
       
-
-
-
          
       measures:
         covid_mortality_rate:
@@ -85,20 +82,21 @@ models:
             suffix: '%'
 
         deaths_to_confirmed_percentage:
-          description: 'Vaccination doses administered normalized by the country population'
+          description: 'Number of people who died from covid devided by the country population'
           sql: 100*IEEE_DIVIDE(sum(new_deceased),sum(coalesce(new_confirmed,0)))
           reportOptions:
             suffix: '%'
 
        
         fully_vaccinated_percentage:
-          description: 'Vaccination doses administered normalized by the country population'
+          description: 'Amount of people who are fully vaccinated normalized by the country population'
           sql: 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
           reportOptions:
             suffix: '%'
 
+
         ratio_of_tests_done_by_country_population:
-          description: 'For comparison of testing between countries'
+          description: 'The amount of tests done in each country normalized by the country population'
           sql: IEEE_DIVIDE(sum(new_tested),avg(population))
         
           
