@@ -6,7 +6,7 @@ models:
     meta:
       dimensions:
         restrictions_on_gatherings:
-          type: 'integer'
+          type: string
           sql: CASE 
             WHEN {{TABLE}}.restrictions_on_gatherings = 4 THEN 'too strict' 
             WHEN {{TABLE}}.restrictions_on_gatherings < 4 THEN 'test'
