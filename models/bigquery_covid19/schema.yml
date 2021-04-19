@@ -17,6 +17,23 @@ models:
             END
           category: counntry_imposed_restrictions
           label: 'Gatherings Restriction Level'
+
+        school_closing:
+          type: string
+          sql: CASE 
+            WHEN {{TABLE}}.school_closing IS NULL  THEN 'No restrictions'
+            WHEN {{TABLE}}.school_closing = 0  THEN 'No restrictions' 
+            WHEN {{TABLE}}.school_closing = 1 THEN 'Low restrictions'
+            WHEN {{TABLE}}.school_closings = 2 THEN 'Moderate restrictions'
+            WHEN {{TABLE}}.school_closing = 3 THEN 'Increased restrictions'
+            WHEN {{TABLE}}.school_closing = 4 THEN 'Maximum restrictions'
+            END
+          category: counntry_imposed_restrictions
+          label: 'Gatherings Restriction Level'
+
+
+
+         
       measures:
         covid_mortality_rate:
           description: 'The percentage of people who died by covid in a country'
@@ -339,12 +356,7 @@ models:
         meta:
           dimension:
             type: 'timestamp'
-      - name: school_closing
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_restrictions
-            label: 'School Closing Level'
+      
       - name: workplace_closing
         meta:
           dimension:
