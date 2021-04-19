@@ -371,12 +371,6 @@ models:
           dimension:
             type: 'timestamp'
       
-      - name: workplace_closing
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_restrictions
-            label: 'Workplace Closing Level'
       - name: cancel_public_events
         meta:
           dimension:
