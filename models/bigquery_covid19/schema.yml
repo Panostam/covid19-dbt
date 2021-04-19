@@ -15,7 +15,7 @@ models:
             WHEN {{TABLE}}.restrictions_on_gatherings = 3 THEN 'Increased restrictions'
             WHEN {{TABLE}}.restrictions_on_gatherings = 4 THEN 'Maximum restrictions'
             END
-          category: counntry_imposed_restrictions
+          category: country_imposed_restrictions
           label: 'Gatherings Restriction Level'
 
         school_closing:
@@ -28,8 +28,8 @@ models:
             WHEN {{TABLE}}.school_closing = 3 THEN 'Increased restrictions'
             WHEN {{TABLE}}.school_closing = 4 THEN 'Maximum restrictions'
             END
-          category: counntry_imposed_restrictions
-          label: 'Gatherings Restriction Level'
+          category: country_imposed_restrictions
+          label: 'School Closing Restrictions'
 
 
 
