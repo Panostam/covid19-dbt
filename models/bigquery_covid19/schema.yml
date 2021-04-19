@@ -90,10 +90,10 @@ models:
 
        
         fully_vaccinated_percentage:
-          type: string
+          type: double
           description: 'Amount of people who are fully vaccinated normalized by the country population'
           sql: CASE 
-            WHEN {{TABLE}}.country_name = 'Germany'  THEN 'Invalid vaccination data'
+            WHEN {{TABLE}}.country_name = 'Germany'  THEN IS NULL
             WHEN {{TABLE}}.country_name != 'Germany'  THEN 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
             END
           category: important_calulated_indeces
