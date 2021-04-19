@@ -119,11 +119,11 @@ models:
           aggregation: sum
           category: patient_information
         
-        total_vaccinated:
+        amount_of_people_vaccinated:
           column: new_persons_vaccinated 
           aggregation: sum
           category: vaccinations
-        total_fully_vaccinated:
+        amount_of_people_fully_vaccinated:
           column: new_persons_fully_vaccinated 
           aggregation: sum
           category: vaccinations
