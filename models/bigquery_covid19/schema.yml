@@ -8,8 +8,12 @@ models:
         restrictions_on_gatherings:
           type: string
           sql: CASE 
-            WHEN {{TABLE}}.restrictions_on_gatherings = 4 THEN 'too strict' 
-            WHEN {{TABLE}}.restrictions_on_gatherings < 4 THEN 'test'
+            WHEN {{TABLE}}.restrictions_on_gatherings = 0 THEN 'No restrictions' 
+            WHEN {{TABLE}}.restrictions_on_gatherings = 1 THEN 'Low restrictions'
+            WHEN {{TABLE}}.restrictions_on_gatherings = 2 THEN 'Moderate restrictions'
+            WHEN {{TABLE}}.restrictions_on_gatherings = 3 THEN 'Increased restrictions'
+            WHEN {{TABLE}}.restrictions_on_gatherings = 4 THEN 'Maximum restrictions'
+
             END
           category: counntry_imposed_restrictions
           label: 'Gatherings Restriction Level'
@@ -321,14 +325,7 @@ models:
           column: relative_humidity
           aggregation: average
           category: country_climate_properties
-          
-
-        
-       
-        
-        
-        
-        
+            
          
     
     columns:
