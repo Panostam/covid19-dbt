@@ -99,12 +99,6 @@ models:
           category: important_calulated_indeces
           reportOptions:
             suffix: '%'
-
-
-        ratio_of_tests_done_by_country_population:
-          description: 'The amount of tests done in each country normalized by the country population'
-          sql: IEEE_DIVIDE(sum(new_tested),avg(population))
-          category: important_calulated_indeces
         
           
 
