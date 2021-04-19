@@ -32,7 +32,7 @@ models:
           label: 'School Closing Restrictions'
      
 
-      workplace_closing:
+        workplace_closing:
           type: string
           sql: CASE 
             WHEN {{TABLE}}.workplace_closing IS NULL  THEN 'No restrictions'
