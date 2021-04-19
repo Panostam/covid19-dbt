@@ -8,7 +8,8 @@ models:
         restrictions_on_gatherings:
           type: string
           sql: CASE 
-            WHEN {{TABLE}}.restrictions_on_gatherings = 0 OR WHEN {{TABLE}}.restrictions_on_gatherings IS NULL  THEN 'No restrictions' 
+            WHEN {{TABLE}}.restrictions_on_gatherings IS NULL  THEN 'No restrictions'
+            WHEN {{TABLE}}.restrictions_on_gatherings = 0  THEN 'No restrictions' 
             WHEN {{TABLE}}.restrictions_on_gatherings = 1 THEN 'Low restrictions'
             WHEN {{TABLE}}.restrictions_on_gatherings = 2 THEN 'Moderate restrictions'
             WHEN {{TABLE}}.restrictions_on_gatherings = 3 THEN 'Increased restrictions'
