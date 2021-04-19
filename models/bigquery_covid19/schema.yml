@@ -4,9 +4,16 @@ models:
   - name: test
     description: 'Covid19 Public Bigquery data'
     meta:
-       
+      dimensions:
+        restrictions_on_gatherings:
+          type: 'integer'
+          sql: CASE 
+            WHEN {{TABLE}}.restrictions_on_gatherings = 4 THEN 'too strict' 
+            WHEN {{TABLE}}.restrictions_on_gatherings < 4 THEN 'test'
+            END
+          category: counntry_imposed_restrictions
+          label: 'Gatherings Restriction Level'
       measures:
-      
         covid_mortality_rate:
           description: 'The percentage of people who died by covid in a country'
           sql: 100*sum(new_deceased)/avg(population)
@@ -586,12 +593,6 @@ models:
             type: 'integer'
             category: counntry_imposed_restrictions
             label: 'Event Cancellation Level'
-      - name: restrictions_on_gatherings
-        meta:
-          dimension:
-            type: 'integer'
-            category: counntry_imposed_restrictions
-            label: 'Gatherings Restriction Level'
       - name: stay_at_home_requirements
         meta:
           dimension:
