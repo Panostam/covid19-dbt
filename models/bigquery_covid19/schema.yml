@@ -30,6 +30,20 @@ models:
             END
           category: country_imposed_restrictions
           label: 'School Closing Restrictions'
+     
+
+      workplace_closing:
+          type: string
+          sql: CASE 
+            WHEN {{TABLE}}.workplace_closing IS NULL  THEN 'No restrictions'
+            WHEN {{TABLE}}.workplace_closing = 0  THEN 'No restrictions' 
+            WHEN {{TABLE}}.workplace_closing = 1 THEN 'Low restrictions'
+            WHEN {{TABLE}}.workplace_closing = 2 THEN 'Moderate restrictions'
+            WHEN {{TABLE}}.workplace_closing = 3 THEN 'Increased restrictions'
+            WHEN {{TABLE}}.workplace_closing = 4 THEN 'Maximum restrictions'
+            END
+          category: country_imposed_restrictions
+          label: 'Workplace Closing Restrictions'
 
 
 
