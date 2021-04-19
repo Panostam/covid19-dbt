@@ -343,37 +343,37 @@ models:
         meta:
           dimension:
             type: 'integer'
-            category: counntry_imposed_restrictions
+            category: country_imposed_restrictions
             label: 'School Closing Level'
       - name: workplace_closing
         meta:
           dimension:
             type: 'integer'
-            category: counntry_imposed_restrictions
+            category: country_imposed_restrictions
             label: 'Workplace Closing Level'
       - name: cancel_public_events
         meta:
           dimension:
             type: 'integer'
-            category: counntry_imposed_restrictions
+            category: country_imposed_restrictions
             label: 'Event Cancellation Level'
       - name: stay_at_home_requirements
         meta:
           dimension:
             type: 'integer'
-            category: counntry_imposed_restrictions
+            category: country_imposed_restrictions
             label: 'Stay at Home Requirements Level'
       - name: restrictions_on_international_movement
         meta:
           dimension:
             type: 'integer'
-            category: counntry_imposed_restrictions
+            category: country_imposed_restrictions
             label: 'International Movement Restriction Level'
       - name: international_travel_controls
         meta:
           dimension:
             type: 'integer'
-            category: counntry_imposed_restrictions
+            category: country_imposed_restrictions
             label: 'International Travel Control Level'
       - name: income_support
         meta:
