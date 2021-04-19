@@ -14,14 +14,13 @@ models:
             WHEN {{TABLE}}.restrictions_on_gatherings = 2 THEN 'Moderate restrictions'
             WHEN {{TABLE}}.restrictions_on_gatherings = 3 THEN 'Increased restrictions'
             WHEN {{TABLE}}.restrictions_on_gatherings = 4 THEN 'Maximum restrictions'
-
             END
           category: counntry_imposed_restrictions
           label: 'Gatherings Restriction Level'
       measures:
         covid_mortality_rate:
           description: 'The percentage of people who died by covid in a country'
-          sql: 100*sum(new_deceased)/avg(population)
+          sql: 100*IEEE_DIVIDE(sum(new_deceased),avg(population))
           reportOptions:
             suffix: '%'
 
