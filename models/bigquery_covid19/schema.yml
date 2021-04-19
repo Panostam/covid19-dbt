@@ -59,18 +59,18 @@ models:
           category: country_supporting_measures
           label: 'Income support to citizens'
 
-        dept_relief:
+        debt_relief:
           type: string
           sql: CASE 
-            WHEN {{TABLE}}.dept_relief IS NULL  THEN 'No dept relief'
-            WHEN {{TABLE}}.dept_relief = 0  THEN 'No dept relieft' 
-            WHEN {{TABLE}}.dept_relief = 1 THEN 'Low dept relief'
-            WHEN {{TABLE}}.dept_relief = 2 THEN 'Moderate dept relief'
-            WHEN {{TABLE}}.dept_relief = 3 THEN 'Increased dept relief'
-            WHEN {{TABLE}}.dept_relief = 4 THEN 'Maximum dept relief'
+            WHEN {{TABLE}}.debt_relief IS NULL  THEN 'No debt relief'
+            WHEN {{TABLE}}.debt_relief = 0  THEN 'No debt relieft' 
+            WHEN {{TABLE}}.debt_relief = 1 THEN 'Low debt relief'
+            WHEN {{TABLE}}.debt_relief = 2 THEN 'Moderate debt relief'
+            WHEN {{TABLE}}.debt_relief = 3 THEN 'Increased debt relief'
+            WHEN {{TABLE}}.debt_relief = 4 THEN 'Maximum debt relief'
             END
           category: country_supporting_measures
-          label: 'Dept relief to citizens'
+          label: 'Debt relief to citizens'
       
       
 
