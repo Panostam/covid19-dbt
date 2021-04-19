@@ -63,7 +63,7 @@ models:
           type: string
           sql: CASE 
             WHEN {{TABLE}}.debt_relief IS NULL  THEN 'No debt relief'
-            WHEN {{TABLE}}.debt_relief = 0  THEN 'No debt relieft' 
+            WHEN {{TABLE}}.debt_relief = 0  THEN 'No debt relief' 
             WHEN {{TABLE}}.debt_relief = 1 THEN 'Low debt relief'
             WHEN {{TABLE}}.debt_relief = 2 THEN 'Moderate debt relief'
             WHEN {{TABLE}}.debt_relief = 3 THEN 'Increased debt relief'
