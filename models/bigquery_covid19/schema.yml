@@ -433,11 +433,7 @@ models:
             type: 'integer'
             category: country_imposed_policies
             label: 'Vaccination Policy Level'
-      - name: aggregation_level
-        meta:
-          dimension:
-            type: 'integer'
-            label: 'aggregation level'
+
 
             
 
