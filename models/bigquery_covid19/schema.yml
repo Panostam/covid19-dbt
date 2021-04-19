@@ -24,7 +24,7 @@ models:
             WHEN {{TABLE}}.school_closing IS NULL  THEN 'No restrictions'
             WHEN {{TABLE}}.school_closing = 0  THEN 'No restrictions' 
             WHEN {{TABLE}}.school_closing = 1 THEN 'Low restrictions'
-            WHEN {{TABLE}}.school_closings = 2 THEN 'Moderate restrictions'
+            WHEN {{TABLE}}.school_closing = 2 THEN 'Moderate restrictions'
             WHEN {{TABLE}}.school_closing = 3 THEN 'Increased restrictions'
             WHEN {{TABLE}}.school_closing = 4 THEN 'Maximum restrictions'
             END
