@@ -82,12 +82,11 @@ models:
           reportOptions:
             suffix: '%'
 
-        deaths_to_confirmed_percentage:
-          description: 'Number of people who died from covid devided by the country population'
-          sql: 100*IEEE_DIVIDE(sum(new_deceased),sum(coalesce(new_confirmed,0)))
+        deaths_to_confirmed_ratio:
+          description: 'Total number of people who died from covid devided by the amount of people who were tested positive'
+          sql: IEEE_DIVIDE(sum(new_deceased),sum(coalesce(new_confirmed,0)))
           category: important_calulated_indeces
-          reportOptions:
-            suffix: '%'
+          
 
        
         fully_vaccinated_percentage:
