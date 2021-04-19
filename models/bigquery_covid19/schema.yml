@@ -24,9 +24,11 @@ models:
           reportOptions:
             suffix: '%'
 
-        deaths_to_confirmed_ratio:
+        deaths_to_confirmed_percentage:
           description: 'Vaccination doses administered normalized by the country population'
-          sql: sum(new_deceased)/sum(coalesce(new_confirmed,0))
+          sql: 100*IEEE_DIVIDE(sum(new_deceased),sum(coalesce(new_confirmed,0)))
+          reportOptions:
+            suffix: '%'
 
        
         vaccination_index_per_country:
