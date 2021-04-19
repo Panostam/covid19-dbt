@@ -37,9 +37,9 @@ models:
           reportOptions:
             suffix: '%'
 
-        ratio_of_testing_by_country_population:
+        ratio_of_tests_done_by_country_population:
           description: 'For comparison of testing between countries'
-          sql: sum(new_tested)/avg(population)
+          sql: IEEE_DIVIDE(sum(new_tested),avg(population))
         
           
 
