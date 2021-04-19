@@ -90,6 +90,7 @@ models:
 
        
         fully_vaccinated_percentage:
+          type: string
           description: 'Amount of people who are fully vaccinated normalized by the country population'
           sql: CASE 
             WHEN {{TABLE}}.country_name = 'Germany'  THEN 'Invalid vaccination data'
