@@ -21,15 +21,15 @@ models:
         school_closing:
           type: string
           sql: CASE 
-            WHEN {{TABLE}}.school_closing IS NULL  THEN 'No restrictions'
-            WHEN {{TABLE}}.school_closing = 0  THEN 'No restrictions' 
-            WHEN {{TABLE}}.school_closing = 1 THEN 'Low restrictions'
-            WHEN {{TABLE}}.school_closing = 2 THEN 'Moderate restrictions'
-            WHEN {{TABLE}}.school_closing = 3 THEN 'Increased restrictions'
-            WHEN {{TABLE}}.school_closing = 4 THEN 'Maximum restrictions'
+            WHEN {{TABLE}}.school_closing IS NULL  THEN 'Fully open'
+            WHEN {{TABLE}}.school_closing = 0  THEN 'Fully open' 
+            WHEN {{TABLE}}.school_closing = 1 THEN 'Small amount closed'
+            WHEN {{TABLE}}.school_closing = 2 THEN 'Moderate amount closed'
+            WHEN {{TABLE}}.school_closing = 3 THEN 'Increased amount closed'
+            WHEN {{TABLE}}.school_closing = 4 THEN 'Fully closed'
             END
           category: country_imposed_restrictions
-          label: 'School Closing Restrictions'
+          label: 'School Closing Level'
      
 
         workplace_closing:
