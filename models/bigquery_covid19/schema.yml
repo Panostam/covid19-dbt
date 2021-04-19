@@ -46,6 +46,35 @@ models:
           label: 'Workplace Closing Restrictions'
 
 
+        income_support:
+          type: string
+          sql: CASE 
+            WHEN {{TABLE}}.income_support IS NULL  THEN 'No support'
+            WHEN {{TABLE}}.income_support = 0  THEN 'No support' 
+            WHEN {{TABLE}}.income_support = 1 THEN 'Low support'
+            WHEN {{TABLE}}.income_support = 2 THEN 'Moderate support'
+            WHEN {{TABLE}}.income_support = 3 THEN 'Increased support'
+            WHEN {{TABLE}}.income_support = 4 THEN 'Maximum support'
+            END
+          category: country_supporting_measures
+          label: 'Income support to citizens'
+
+        dept_relief:
+          type: string
+          sql: CASE 
+            WHEN {{TABLE}}.dept_relief IS NULL  THEN 'No dept relief'
+            WHEN {{TABLE}}.dept_relief = 0  THEN 'No dept relieft' 
+            WHEN {{TABLE}}.dept_relief = 1 THEN 'Low dept relief'
+            WHEN {{TABLE}}.dept_relief = 2 THEN 'Moderate dept relief'
+            WHEN {{TABLE}}.dept_relief = 3 THEN 'Increased dept relief'
+            WHEN {{TABLE}}.dept_relief = 4 THEN 'Maximum dept relief'
+            END
+          category: country_supporting_measures
+          label: 'Dept relief to citizens'
+      
+      
+
+
 
          
       measures:
@@ -371,90 +400,12 @@ models:
           dimension:
             type: 'timestamp'
       
-      - name: cancel_public_events
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_restrictions
-            label: 'Event Cancellation Level'
-      - name: stay_at_home_requirements
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_restrictions
-            label: 'Stay at Home Requirements Level'
-      - name: restrictions_on_international_movement
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_restrictions
-            label: 'International Movement Restriction Level'
-      - name: international_travel_controls
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_restrictions
-            label: 'International Travel Control Level'
-      - name: income_support
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_support_measures
-            label: 'Income Support Level'
-      - name: debt_relief
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_support_measures
-            label: 'Debt Relief Level'
-      - name: fiscal_measures
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_support_measures
-            label: 'Fiscal Measures Level'
-      - name: international_support
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_support_measures
-            label: 'International Support Level'
-      - name: testing_policy
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_policies
-            label: 'Testing Policy Level'
-      - name: contact_tracing
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_policies
-            label: 'Contact Tracing Level'
-      - name: emergency_investment_in_healrthcare
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_policies
-            label: 'Emergency Investment in Healthcare Level'
-      - name: investment_in_vaccines
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_policies
-            label: 'Investment in Vaccines Level'
-      - name: facial_coverings
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_policies
-            label: 'Facial Coverings Level'
-      - name: vaccination_policy
-        meta:
-          dimension:
-            type: 'integer'
-            category: country_imposed_policies
-            label: 'Vaccination Policy Level'
+
+
+
+
+
+
 
 
             
