@@ -104,51 +104,50 @@ models:
         total_tested_patients:
           column: new_tested
           aggregation: sum
-          category: tested_patients
+          category: patient_information
        
-
 
         total_confirmed_cases:
           column: new_confirmed
           aggregation: sum
-          category: Confirmed_cases
+          category: patient_information
         
 
 
         total_people_deceased:
           column: new_deceased
           aggregation: sum
-          category: Deceased_patients 
+          category: patient_information
         
         total_vaccinated:
           column: new_persons_vaccinated 
           aggregation: sum
-          category: vaccinated
+          category: vaccinations
         total_fully_vaccinated:
           column: new_persons_fully_vaccinated 
           aggregation: sum
-          category: vaccinated
+          category: vaccinations
         total_vaccine_doses_admininstered:
           column: new_vaccine_doses_administered
           aggregation: sum
-          category: vaccinated
+          category: vaccinations
 
         total_hospitalized_patients:
           column: new_hospitalized_patients
           aggregation: sum
-          category: hospitalized_patients
+          category: patient_information
         
 
         total_intensive_care_patients:
           column: new_intensive_care_patients
           aggregation: sum
-          category: intensive_care_patients
+          category: patient_information
         
 
         total_recovered_patients:
           column: new_recovered
           aggregation: sum
-          category: recovered_patients
+          category: patient_information
        
 
         
