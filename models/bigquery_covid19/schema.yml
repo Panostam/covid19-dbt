@@ -281,12 +281,7 @@ models:
           column: human_development_index
           aggregation: average
           category: country_specific_indices
-        stringency_index:
-          
-          column: stringency_index
-          description: 'This is a composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest)'
-          aggregation: average
-          category: country_specific_indices
+        
         human_capital_index:
           column: human_capital_index
           aggregation: average
@@ -297,6 +292,12 @@ models:
           category: country_specific_indices
         pollution_mortality_rate:
           column: pollution_mortality_rate
+          aggregation: average
+          category: country_specific_indices
+        
+        stringency_index:
+          column: stringency_index
+          description: 'This is a composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest)'
           aggregation: average
           category: country_specific_indices
 
