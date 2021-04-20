@@ -4,8 +4,6 @@ models:
   - name: test
     description: 'Covid19 Public Bigquery data'
     meta:
-      mappings:
-        eventTimestamp: date
       dimensions:
         restrictions_on_gatherings:
           type: string
