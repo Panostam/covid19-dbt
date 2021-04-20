@@ -412,6 +412,11 @@ models:
         meta:
           dimension:
             type: 'timestamp'
+
+      - name: stringency_index
+        meta:
+          dimension: 
+            type: 'integer'
       
 
 
