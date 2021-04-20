@@ -75,9 +75,7 @@ models:
       
          
       measures:
-        
-         
-            
+
         covid_mortality_rate:
           description: 'The percentage of people who died by covid in a country'
           sql: 100*IEEE_DIVIDE(sum(new_deceased),avg(population))
@@ -100,8 +98,7 @@ models:
             WHEN {{TABLE}}.country_name != 'Germany'  THEN 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
             END
           category: important_calulated_indices
-          filters:
-            - {dimension: 'country_name', operator: 'equals', value: 'Germany', valueType: 'string'}
+          
           reportOptions:
             suffix: '%'
         
@@ -111,6 +108,8 @@ models:
           description: 'Amount of people who are fully vaccinated normalized by the country population'
           sql: 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
           category: important_calulated_indices
+          filters:
+            - {dimension: 'country_name', operator: 'equals', value: 'Germany', valueType: 'string'}
           reportOptions:
             suffix: '%'
           
