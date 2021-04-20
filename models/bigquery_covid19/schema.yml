@@ -85,14 +85,14 @@ models:
         covid_mortality_rate:
           description: 'The percentage of people who died by covid in a country'
           sql: 100*IEEE_DIVIDE(sum(new_deceased),avg(population))
-          category: important_calulated_indeces
+          category: important_calulated_indices
           reportOptions:
             suffix: '%'
 
         deaths_to_confirmed_ratio:
           description: 'Total number of people who died from covid devided by the amount of people who were tested positive'
           sql: IEEE_DIVIDE(sum(new_deceased),sum(coalesce(new_confirmed,0)))
-          category: important_calulated_indeces
+          category: important_calulated_indices
           
 
        
@@ -103,7 +103,7 @@ models:
             WHEN {{TABLE}}.country_name = 'Germany'  THEN 6.7
             WHEN {{TABLE}}.country_name != 'Germany'  THEN 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
             END
-          category: important_calulated_indeces
+          category: important_calulated_indices
           reportOptions:
             suffix: '%'
         
