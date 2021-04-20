@@ -6,7 +6,6 @@ models:
     meta:
       mappings:
         eventTimestamp: date
-
       dimensions:
         restrictions_on_gatherings:
           type: string
