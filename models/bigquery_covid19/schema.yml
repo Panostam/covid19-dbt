@@ -97,8 +97,7 @@ models:
             WHEN {{TABLE}}.country_name = 'Germany'  THEN 6.7
             WHEN {{TABLE}}.country_name != 'Germany'  THEN 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
             END
-          category: important_calulated_indices
-          
+          category: important_calulated_indices  
           reportOptions:
             suffix: '%'
         
@@ -413,11 +412,6 @@ models:
           dimension:
             type: 'timestamp'
 
-      - name: stringency_index
-        meta:
-          dimension: 
-            type: 'integer'
-      
 
 
 
