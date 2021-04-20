@@ -75,12 +75,8 @@ models:
       
          
       measures:
-        filtered_measure:
-          type: double
-          column: new_confirmed
-          aggregation: sum
-          filters:
-            - {dimension: 'country_name', operator: 'equals', value: 'Germany', valueType: 'string'}
+        
+         
             
         covid_mortality_rate:
           description: 'The percentage of people who died by covid in a country'
