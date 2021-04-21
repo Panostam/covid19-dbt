@@ -95,7 +95,7 @@ models:
           
 
         total_tested_patients:
-          column: new_tested
+          sql: cast (new_tested as int64)
           aggregation: sum
           category: patient_information
        
