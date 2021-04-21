@@ -234,6 +234,7 @@ models:
           category: country_specific_indices
           aggregation: average
         infant_mortality_rate:
+          description: 'Infant mortality rate (IMR) is the number of deaths per 1,000 live births of children under one year of age'
           column: infant_mortality_rate
           category: country_specific_indices
           aggregation: average
