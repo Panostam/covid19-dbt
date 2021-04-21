@@ -280,6 +280,7 @@ models:
           aggregation: average
           category: country_specific_indices
         pollution_mortality_rate:
+          description: 'Mortality rate attributed to different kinds of pollution'
           column: pollution_mortality_rate
           aggregation: average
           category: country_specific_indices
