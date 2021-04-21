@@ -20,7 +20,7 @@ models:
           label: 'Gatherings Restriction Level'
 
         school_closing:
-          description: 'Expresses the amount of closed schools to decrease the spread of the virus '
+          description: 'Expresses the amount of closed schools to decrease the spread of the virus'
           type: string
           sql: CASE 
             WHEN {{TABLE}}.school_closing IS NULL  THEN 'Fully open'
@@ -36,6 +36,7 @@ models:
 
 
         income_support:
+          description: "The amount of financial support offered to a country's citizens due to lockdowns"
           type: string
           sql: CASE 
             WHEN {{TABLE}}.income_support IS NULL  THEN 'No support'
@@ -49,6 +50,7 @@ models:
           label: 'Income support to citizens'
 
         debt_relief:
+          description: "The level of dept relied offered to a country's citizens due to lockdowns"
           type: string
           sql: CASE 
             WHEN {{TABLE}}.debt_relief IS NULL  THEN 'No debt relief'
