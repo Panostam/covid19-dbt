@@ -258,17 +258,20 @@ models:
           reportOptions:
             prefix: $
         out_of_pocket_health_expenditure:
+          description: 'Out-of-pocket payments are expenditures borne directly by a patient where insurance does not cover the full cost of the health good or service'
           column: out_of_pocket_health_expenditure_usd 
           aggregation: average
           category: country_specific_indices
           reportOptions:
             prefix: $
         human_development_index:
+          description: 'The Human Development Index (HDI) is a summary measure of average achievement in key dimensions of human development: a long and healthy life, being knowledgeable and have a decent standard of living.'
           column: human_development_index
           aggregation: average
           category: country_specific_indices
         
         human_capital_index:
+          description: 'The Index measures which countries are best in mobilizing the economic and professional potential of its citizens. The index measures how much capital each country loses through lack of education and health.'
           column: human_capital_index
           aggregation: average
           category: country_specific_indices
