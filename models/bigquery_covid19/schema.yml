@@ -212,11 +212,13 @@ models:
 
         gdp_usd:
           column: gdp_usd 
+          description: 'Gross domestic product in US dollars'
           aggregation: average
           category: country_specific_indices
           reportOptions:
             suffix: $
         gdp_per_capita:
+          description: "Per capita gross domestic product (GDP) is a metric that breaks down a country's economic output per person and is calculated by dividing the GDP of a country by its population. In this case is calculated in US dollars"
           sql: avg(gdp_usd)/avg(population) 
           category: country_specific_indices
           reportOptions:
