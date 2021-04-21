@@ -6,6 +6,7 @@ models:
     meta:
       dimensions:
         restrictions_on_gatherings:
+          description: 'The level of restrictions regarding the amount of people allowed in the same place'
           type: string
           sql: CASE 
             WHEN {{TABLE}}.restrictions_on_gatherings IS NULL  THEN 'No restrictions'
@@ -19,6 +20,7 @@ models:
           label: 'Gatherings Restriction Level'
 
         school_closing:
+          description: 'Expresses the amount of closed schools to decrease the spread of the virus '
           type: string
           sql: CASE 
             WHEN {{TABLE}}.school_closing IS NULL  THEN 'Fully open'
