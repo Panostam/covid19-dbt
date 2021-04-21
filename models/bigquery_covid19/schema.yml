@@ -224,10 +224,12 @@ models:
           reportOptions:
             suffix: $          
         smoking_prevalence_index:
+          description: 'Index that indicates the amount of people smoking in a country'
           column: smoking_prevalence
           category: country_specific_indices
           aggregation: average
         diabetes_prevalence_index:
+          description: 'Index that indicates the amount of people that have diabetes in a country'
           column: diabetes_prevalence
           category: country_specific_indices
           aggregation: average
