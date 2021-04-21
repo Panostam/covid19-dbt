@@ -251,6 +251,7 @@ models:
           category: country_specific_indices
           aggregation: average
         health_expenditure:
+          description: 'Health expenditure includes all expenditures for the provision of health services, family planning activities, nutrition activities and emergency aid designated for health, but it excludes the provision of drinking water and sanitation. Health financing is a critical component of health systems.'
           column: health_expenditure_usd 
           aggregation: average
           category: country_specific_indices
