@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: test
+  - name: covid
     description: 'Covid19 Public Bigquery data'
     columns:
       - name: country_name
@@ -14,6 +14,7 @@ models:
             type: 'timestamp'
     meta:
       label: Covid
+      name: test
       dimensions:
         restrictions_on_gatherings:
           description: 'The level of restrictions regarding the amount of people allowed in the same place'
