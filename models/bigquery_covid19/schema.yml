@@ -20,6 +20,7 @@ models:
           restrictions_on_gatherings:
             description: 'The level of restrictions regarding the amount of people allowed in the same place'
             type: string
+            #{% raw %}
             sql: CASE 
               WHEN {{TABLE}}.restrictions_on_gatherings IS NULL  THEN 'No restrictions'
               WHEN {{TABLE}}.restrictions_on_gatherings = 0  THEN 'No restrictions' 
@@ -28,12 +29,14 @@ models:
               WHEN {{TABLE}}.restrictions_on_gatherings = 3 THEN 'Increased restrictions'
               WHEN {{TABLE}}.restrictions_on_gatherings = 4 THEN 'Maximum restrictions'
               END
+            #{% endraw %}
             category: country_imposed_restrictions
             label: 'Gatherings Restriction Level'
 
           school_closing:
             description: 'Expresses the amount of closed schools to decrease the spread of the virus'
             type: string
+            #{% raw %}
             sql: CASE 
               WHEN {{TABLE}}.school_closing IS NULL  THEN 'Fully open'
               WHEN {{TABLE}}.school_closing = 0  THEN 'Fully open' 
@@ -42,6 +45,7 @@ models:
               WHEN {{TABLE}}.school_closing = 3 THEN 'Increased amount closed'
               WHEN {{TABLE}}.school_closing = 4 THEN 'Fully closed'
               END
+            #{% endraw %}
             category: country_imposed_restrictions
             label: 'School Closing Level'
       
@@ -50,6 +54,7 @@ models:
           income_support:
             description: "The amount of financial support offered to a country's citizens due to lockdowns"
             type: string
+            #{% raw %}
             sql: CASE 
               WHEN {{TABLE}}.income_support IS NULL  THEN 'No support'
               WHEN {{TABLE}}.income_support = 0  THEN 'No support' 
@@ -58,12 +63,14 @@ models:
               WHEN {{TABLE}}.income_support = 3 THEN 'Increased support'
               WHEN {{TABLE}}.income_support = 4 THEN 'Maximum support'
               END
+            #{% endraw %}
             category: country_supporting_measures
             label: 'Income support to citizens'
 
           debt_relief:
             description: "The level of dept relied offered to a country's citizens due to lockdowns"
             type: string
+            #{% raw %}
             sql: CASE 
               WHEN {{TABLE}}.debt_relief IS NULL  THEN 'No debt relief'
               WHEN {{TABLE}}.debt_relief = 0  THEN 'No debt relief' 
@@ -72,6 +79,7 @@ models:
               WHEN {{TABLE}}.debt_relief = 3 THEN 'Increased debt relief'
               WHEN {{TABLE}}.debt_relief = 4 THEN 'Maximum debt relief'
               END
+            #{% endraw %}
             category: country_supporting_measures
             label: 'Debt relief to citizens'
         
@@ -96,10 +104,12 @@ models:
           fully_vaccinated_percentage:
             type: double
             description: 'Amount of people who are fully vaccinated normalized by the country population'
+            #{% raw %}
             sql: CASE 
               WHEN {{TABLE}}.country_name = 'Germany'  THEN 6.7
               WHEN {{TABLE}}.country_name != 'Germany'  THEN 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
               END
+            #{% endraw %}
             category: important_calulated_indices  
             reportOptions:
               suffix: '%'
