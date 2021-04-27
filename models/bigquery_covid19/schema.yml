@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: test
+  - name: covid
     description: 'Covid19 Public Bigquery data'
     meta:
       dimensions:
