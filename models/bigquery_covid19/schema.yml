@@ -6,401 +6,402 @@ models:
     columns:
       - name: country_name
         meta:
-          dimension:
+          rakam.dimension:
             type: 'string'
       - name: date
         meta:
-          dimension:
+          rakam.dimension:
             type: 'timestamp'
     meta:
-      label: Country Level Covid
-      name: test
-      dimensions:
-        restrictions_on_gatherings:
-          description: 'The level of restrictions regarding the amount of people allowed in the same place'
-          type: string
-          sql: CASE 
-            WHEN {{TABLE}}.restrictions_on_gatherings IS NULL  THEN 'No restrictions'
-            WHEN {{TABLE}}.restrictions_on_gatherings = 0  THEN 'No restrictions' 
-            WHEN {{TABLE}}.restrictions_on_gatherings = 1 THEN 'Low restrictions'
-            WHEN {{TABLE}}.restrictions_on_gatherings = 2 THEN 'Moderate restrictions'
-            WHEN {{TABLE}}.restrictions_on_gatherings = 3 THEN 'Increased restrictions'
-            WHEN {{TABLE}}.restrictions_on_gatherings = 4 THEN 'Maximum restrictions'
-            END
-          category: country_imposed_restrictions
-          label: 'Gatherings Restriction Level'
+      rakam:
+        label: Country Level Covid
+        name: test
+        dimensions:
+          restrictions_on_gatherings:
+            description: 'The level of restrictions regarding the amount of people allowed in the same place'
+            type: string
+            sql: CASE 
+              WHEN {{TABLE}}.restrictions_on_gatherings IS NULL  THEN 'No restrictions'
+              WHEN {{TABLE}}.restrictions_on_gatherings = 0  THEN 'No restrictions' 
+              WHEN {{TABLE}}.restrictions_on_gatherings = 1 THEN 'Low restrictions'
+              WHEN {{TABLE}}.restrictions_on_gatherings = 2 THEN 'Moderate restrictions'
+              WHEN {{TABLE}}.restrictions_on_gatherings = 3 THEN 'Increased restrictions'
+              WHEN {{TABLE}}.restrictions_on_gatherings = 4 THEN 'Maximum restrictions'
+              END
+            category: country_imposed_restrictions
+            label: 'Gatherings Restriction Level'
 
-        school_closing:
-          description: 'Expresses the amount of closed schools to decrease the spread of the virus'
-          type: string
-          sql: CASE 
-            WHEN {{TABLE}}.school_closing IS NULL  THEN 'Fully open'
-            WHEN {{TABLE}}.school_closing = 0  THEN 'Fully open' 
-            WHEN {{TABLE}}.school_closing = 1 THEN 'Small amount closed'
-            WHEN {{TABLE}}.school_closing = 2 THEN 'Moderate amount closed'
-            WHEN {{TABLE}}.school_closing = 3 THEN 'Increased amount closed'
-            WHEN {{TABLE}}.school_closing = 4 THEN 'Fully closed'
-            END
-          category: country_imposed_restrictions
-          label: 'School Closing Level'
-     
-
-
-        income_support:
-          description: "The amount of financial support offered to a country's citizens due to lockdowns"
-          type: string
-          sql: CASE 
-            WHEN {{TABLE}}.income_support IS NULL  THEN 'No support'
-            WHEN {{TABLE}}.income_support = 0  THEN 'No support' 
-            WHEN {{TABLE}}.income_support = 1 THEN 'Low support'
-            WHEN {{TABLE}}.income_support = 2 THEN 'Moderate support'
-            WHEN {{TABLE}}.income_support = 3 THEN 'Increased support'
-            WHEN {{TABLE}}.income_support = 4 THEN 'Maximum support'
-            END
-          category: country_supporting_measures
-          label: 'Income support to citizens'
-
-        debt_relief:
-          description: "The level of dept relied offered to a country's citizens due to lockdowns"
-          type: string
-          sql: CASE 
-            WHEN {{TABLE}}.debt_relief IS NULL  THEN 'No debt relief'
-            WHEN {{TABLE}}.debt_relief = 0  THEN 'No debt relief' 
-            WHEN {{TABLE}}.debt_relief = 1 THEN 'Low debt relief'
-            WHEN {{TABLE}}.debt_relief = 2 THEN 'Moderate debt relief'
-            WHEN {{TABLE}}.debt_relief = 3 THEN 'Increased debt relief'
-            WHEN {{TABLE}}.debt_relief = 4 THEN 'Maximum debt relief'
-            END
-          category: country_supporting_measures
-          label: 'Debt relief to citizens'
+          school_closing:
+            description: 'Expresses the amount of closed schools to decrease the spread of the virus'
+            type: string
+            sql: CASE 
+              WHEN {{TABLE}}.school_closing IS NULL  THEN 'Fully open'
+              WHEN {{TABLE}}.school_closing = 0  THEN 'Fully open' 
+              WHEN {{TABLE}}.school_closing = 1 THEN 'Small amount closed'
+              WHEN {{TABLE}}.school_closing = 2 THEN 'Moderate amount closed'
+              WHEN {{TABLE}}.school_closing = 3 THEN 'Increased amount closed'
+              WHEN {{TABLE}}.school_closing = 4 THEN 'Fully closed'
+              END
+            category: country_imposed_restrictions
+            label: 'School Closing Level'
       
-      
-         
-      measures:
 
-        covid_mortality_rate:
-          description: 'The percentage of people who died by covid in a country'
-          sql: 100*IEEE_DIVIDE(sum(new_deceased),avg(population))
-          category: important_calulated_indices
-          reportOptions:
-            suffix: '%'
 
-        deaths_to_confirmed_ratio:
-          description: 'Total number of people who died from covid devided by the amount of people who were tested positive'
-          sql: IEEE_DIVIDE(sum(new_deceased),sum(coalesce(new_confirmed,0)))
-          category: important_calulated_indices
-          
+          income_support:
+            description: "The amount of financial support offered to a country's citizens due to lockdowns"
+            type: string
+            sql: CASE 
+              WHEN {{TABLE}}.income_support IS NULL  THEN 'No support'
+              WHEN {{TABLE}}.income_support = 0  THEN 'No support' 
+              WHEN {{TABLE}}.income_support = 1 THEN 'Low support'
+              WHEN {{TABLE}}.income_support = 2 THEN 'Moderate support'
+              WHEN {{TABLE}}.income_support = 3 THEN 'Increased support'
+              WHEN {{TABLE}}.income_support = 4 THEN 'Maximum support'
+              END
+            category: country_supporting_measures
+            label: 'Income support to citizens'
 
-       
-        fully_vaccinated_percentage:
-          type: double
-          description: 'Amount of people who are fully vaccinated normalized by the country population'
-          sql: CASE 
-            WHEN {{TABLE}}.country_name = 'Germany'  THEN 6.7
-            WHEN {{TABLE}}.country_name != 'Germany'  THEN 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
-            END
-          category: important_calulated_indices  
-          reportOptions:
-            suffix: '%'
+          debt_relief:
+            description: "The level of dept relied offered to a country's citizens due to lockdowns"
+            type: string
+            sql: CASE 
+              WHEN {{TABLE}}.debt_relief IS NULL  THEN 'No debt relief'
+              WHEN {{TABLE}}.debt_relief = 0  THEN 'No debt relief' 
+              WHEN {{TABLE}}.debt_relief = 1 THEN 'Low debt relief'
+              WHEN {{TABLE}}.debt_relief = 2 THEN 'Moderate debt relief'
+              WHEN {{TABLE}}.debt_relief = 3 THEN 'Increased debt relief'
+              WHEN {{TABLE}}.debt_relief = 4 THEN 'Maximum debt relief'
+              END
+            category: country_supporting_measures
+            label: 'Debt relief to citizens'
+        
         
           
+        measures:
 
-        total_tested_patients:
-          sql: cast (new_tested as int64)
-          aggregation: sum
-          category: patient_information
-       
+          covid_mortality_rate:
+            description: 'The percentage of people who died by covid in a country'
+            sql: 100*IEEE_DIVIDE(sum(new_deceased),avg(population))
+            category: important_calulated_indices
+            reportOptions:
+              suffix: '%'
 
-        total_confirmed_cases:
-          column: new_confirmed
-          aggregation: sum
-          category: patient_information
-        
-
-
-        total_people_deceased:
-          column: new_deceased
-          aggregation: sum
-          category: patient_information
-        
-        amount_of_people_vaccinated:
-          column: new_persons_vaccinated 
-          aggregation: sum
-          category: vaccinations
-        amount_of_people_fully_vaccinated:
-          column: new_persons_fully_vaccinated 
-          aggregation: sum
-          category: vaccinations
-        total_vaccine_doses_admininstered:
-          column: new_vaccine_doses_administered
-          aggregation: sum
-          category: vaccinations
-
-        total_hospitalized_patients:
-          column: new_hospitalized_patients
-          aggregation: sum
-          category: patient_information
-        
-
-        total_intensive_care_patients:
-          column: new_intensive_care_patients
-          aggregation: sum
-          category: patient_information
-        
-
-        total_recovered_patients:
-          column: new_recovered
-          aggregation: sum
-          category: patient_information
-       
+          deaths_to_confirmed_ratio:
+            description: 'Total number of people who died from covid devided by the amount of people who were tested positive'
+            sql: IEEE_DIVIDE(sum(new_deceased),sum(coalesce(new_confirmed,0)))
+            category: important_calulated_indices
+            
 
         
-        total_population_male:
-          column: population_male
-          aggregation: average
-          category: gender_specific_properties
-        adult_male_mortality_rate:
-          column: adult_male_mortality_rate
-          aggregation: average
-          category: gender_specific_properties
-        adult_female_mortality_rate:
-          column: adult_female_mortality_rate
-          aggregation: average
-          category: gender_specific_properties
-        total_population_female:
-          column: population_female
-          aggregation: average
-          category: gender_specific_properties
-        total_male_patients_tested:
-          column: new_tested_male
-          aggregation: sum
-          category: gender_specific_properties
-        total_female_patients_tested:
-          column: new_tested_female
-          aggregation: sum
-          category: gender_specific_properties
-        total_male_patients_deceased:
-          column: new_deceased_male
-          aggregation: sum
-          category: gender_specific_properties
-        total_female_patients_deceased:
-          column: new_deceased_female
-          aggregation: sum
-          category: gender_specific_properties
-        total_male_patients_confirmed:
-          column: new_confirmed_male
-          aggregation: sum
-          category: gender_specific_properties
-        total_female_patients_confirmed:
-          column: new_confirmed_female
-          aggregation: sum
-          category: gender_specific_properties
-        total_male_patients_hospitalized:
-          column: new_hospitalized_patients_male
-          aggregation: sum
-          category: gender_specific_properties
-        total_female_patients_hospitalized:
-          column: new_hospitalized_patients_female
-          aggregation: sum
-          category: gender_specific_properties
-        total_intensive_care_male_patients:
-          column: new_intensive_care_patients_male
-          aggregation: sum
-          category: gender_specific_properties
-        total_intensive_care_female_patients:
-          column: new_intensive_care_patients_female
-          aggregation: sum
-          category: gender_specific_properties
-        total_male_patients_recovered:
-          column: new_recovered_male
-          aggregation: sum
-          category: gender_specific_properties
-        total_female_patients_recovered:
-          column: new_recovered_female
-          aggregation: sum
-          category: gender_specific_properties
+          fully_vaccinated_percentage:
+            type: double
+            description: 'Amount of people who are fully vaccinated normalized by the country population'
+            sql: CASE 
+              WHEN {{TABLE}}.country_name = 'Germany'  THEN 6.7
+              WHEN {{TABLE}}.country_name != 'Germany'  THEN 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
+              END
+            category: important_calulated_indices  
+            reportOptions:
+              suffix: '%'
+          
+            
 
-
-        gdp_usd:
-          column: gdp_usd 
-          description: 'Gross domestic product in US dollars'
-          aggregation: average
-          category: country_specific_indices
-          reportOptions:
-            suffix: $
-        gdp_per_capita:
-          description: "Per capita gross domestic product (GDP) is a metric that breaks down a country's economic output per person and is calculated by dividing the GDP of a country by its population. In this case is calculated in US dollars"
-          sql: avg(gdp_usd)/avg(population) 
-          category: country_specific_indices
-          reportOptions:
-            suffix: $          
-        smoking_prevalence_index:
-          description: 'Index that indicates the amount of people smoking in a country'
-          column: smoking_prevalence
-          category: country_specific_indices
-          aggregation: average
-        diabetes_prevalence_index:
-          description: 'Index that indicates the amount of people that have diabetes in a country'
-          column: diabetes_prevalence
-          category: country_specific_indices
-          aggregation: average
-        infant_mortality_rate:
-          description: 'Infant mortality rate (IMR) is the number of deaths per 1,000 live births of children under one year of age'
-          column: infant_mortality_rate
-          category: country_specific_indices
-          aggregation: average
-        nurses_per_1000_people:
-          column: nurses_per_1000
-          category: country_specific_indices
-          aggregation: average
-        physicians_per_1000_people:
-          column: physicians_per_1000
-          category: country_specific_indices
-          aggregation: average
-        hospital_beds_per_1000_people:
-          column: hospital_beds_per_1000
-          category: country_specific_indices
-          aggregation: average
-        health_expenditure:
-          description: 'Health expenditure includes all expenditures for the provision of health services, family planning activities, nutrition activities and emergency aid designated for health, but it excludes the provision of drinking water and sanitation. Health financing is a critical component of health systems.'
-          column: health_expenditure_usd 
-          aggregation: average
-          category: country_specific_indices
-          reportOptions:
-            prefix: $
-        out_of_pocket_health_expenditure:
-          description: 'Out-of-pocket payments are expenditures borne directly by a patient where insurance does not cover the full cost of the health good or service'
-          column: out_of_pocket_health_expenditure_usd 
-          aggregation: average
-          category: country_specific_indices
-          reportOptions:
-            prefix: $
-        human_development_index:
-          description: 'The Human Development Index (HDI) is a summary measure of average achievement in key dimensions of human development: a long and healthy life, being knowledgeable and have a decent standard of living.'
-          column: human_development_index
-          aggregation: average
-          category: country_specific_indices
+          total_tested_patients:
+            sql: cast (new_tested as int64)
+            aggregation: sum
+            category: patient_information
         
-        human_capital_index:
-          description: 'The Index measures which countries are best in mobilizing the economic and professional potential of its citizens. The index measures how much capital each country loses through lack of education and health.'
-          column: human_capital_index
-          aggregation: average
-          category: country_specific_indices
-        life_expectancy:
-          column: life_expectancy
-          aggregation: average
-          category: country_specific_indices
-        pollution_mortality_rate:
-          description: 'Mortality rate attributed to different kinds of pollution'
-          column: pollution_mortality_rate
-          aggregation: average
-          category: country_specific_indices
+
+          total_confirmed_cases:
+            column: new_confirmed
+            aggregation: sum
+            category: patient_information
+          
+
+
+          total_people_deceased:
+            column: new_deceased
+            aggregation: sum
+            category: patient_information
+          
+          amount_of_people_vaccinated:
+            column: new_persons_vaccinated 
+            aggregation: sum
+            category: vaccinations
+          amount_of_people_fully_vaccinated:
+            column: new_persons_fully_vaccinated 
+            aggregation: sum
+            category: vaccinations
+          total_vaccine_doses_admininstered:
+            column: new_vaccine_doses_administered
+            aggregation: sum
+            category: vaccinations
+
+          total_hospitalized_patients:
+            column: new_hospitalized_patients
+            aggregation: sum
+            category: patient_information
+          
+
+          total_intensive_care_patients:
+            column: new_intensive_care_patients
+            aggregation: sum
+            category: patient_information
+          
+
+          total_recovered_patients:
+            column: new_recovered
+            aggregation: sum
+            category: patient_information
         
-        stringency_index:
-          sql: cast(stringency_index as float64)
-          description: 'This is a composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest)'
-          aggregation: average
-          category: country_specific_indices
+
+          
+          total_population_male:
+            column: population_male
+            aggregation: average
+            category: gender_specific_properties
+          adult_male_mortality_rate:
+            column: adult_male_mortality_rate
+            aggregation: average
+            category: gender_specific_properties
+          adult_female_mortality_rate:
+            column: adult_female_mortality_rate
+            aggregation: average
+            category: gender_specific_properties
+          total_population_female:
+            column: population_female
+            aggregation: average
+            category: gender_specific_properties
+          total_male_patients_tested:
+            column: new_tested_male
+            aggregation: sum
+            category: gender_specific_properties
+          total_female_patients_tested:
+            column: new_tested_female
+            aggregation: sum
+            category: gender_specific_properties
+          total_male_patients_deceased:
+            column: new_deceased_male
+            aggregation: sum
+            category: gender_specific_properties
+          total_female_patients_deceased:
+            column: new_deceased_female
+            aggregation: sum
+            category: gender_specific_properties
+          total_male_patients_confirmed:
+            column: new_confirmed_male
+            aggregation: sum
+            category: gender_specific_properties
+          total_female_patients_confirmed:
+            column: new_confirmed_female
+            aggregation: sum
+            category: gender_specific_properties
+          total_male_patients_hospitalized:
+            column: new_hospitalized_patients_male
+            aggregation: sum
+            category: gender_specific_properties
+          total_female_patients_hospitalized:
+            column: new_hospitalized_patients_female
+            aggregation: sum
+            category: gender_specific_properties
+          total_intensive_care_male_patients:
+            column: new_intensive_care_patients_male
+            aggregation: sum
+            category: gender_specific_properties
+          total_intensive_care_female_patients:
+            column: new_intensive_care_patients_female
+            aggregation: sum
+            category: gender_specific_properties
+          total_male_patients_recovered:
+            column: new_recovered_male
+            aggregation: sum
+            category: gender_specific_properties
+          total_female_patients_recovered:
+            column: new_recovered_female
+            aggregation: sum
+            category: gender_specific_properties
 
 
-        total_population:
-          column: population
-          aggregation: average
-          category: country_population_properties
-        population_in_the_largest_city:
-          column: population_largest_city
-          aggregation: average
-          category: country_population_properties
-        total_population_rural_areas:
-          column: population_rural
-          aggregation: average
-          category: country_population_properties
-        total_population_urban_areas:
-          column: population_urban
-          aggregation: average
-          category: country_population_properties
-        population_density:
-          column: population_density
-          aggregation: average
-          category: country_population_properties
-        population_aged_0_to_9_years:
-          column: population_age_00_09
-          aggregation: average
-          category: country_population_properties
-        population_aged_10_to_19_years:
-          column: population_age_10_19
-          aggregation: average
-          category: country_population_properties
-        population_aged_20_to_29_years:
-          column: population_age_20_29
-          aggregation: average
-          category: country_population_properties
-        population_aged_30_to_39_years:
-          column: population_age_30_39
-          aggregation: average
-          category: country_population_properties
-        population_aged_40_to_49_years:
-          column: population_age_40_49
-          aggregation: average
-          category: country_population_properties
-        population_aged_50_to_59_years:
-          column: population_age_50_59
-          aggregation: average
-          category: country_population_properties
-        population_aged_60_to_69_years:
-          column: population_age_60_69
-          aggregation: average
-          category: country_population_properties
-        population_aged_70_to_79_years:
-          column: population_age_70_79
-          aggregation: average
-          category: country_population_properties
-        population_aged_80_and_older:
-          column: population_age_80_and_older
-          aggregation: average
-          category: country_population_properties
+          gdp_usd:
+            column: gdp_usd 
+            description: 'Gross domestic product in US dollars'
+            aggregation: average
+            category: country_specific_indices
+            reportOptions:
+              suffix: $
+          gdp_per_capita:
+            description: "Per capita gross domestic product (GDP) is a metric that breaks down a country's economic output per person and is calculated by dividing the GDP of a country by its population. In this case is calculated in US dollars"
+            sql: avg(gdp_usd)/avg(population) 
+            category: country_specific_indices
+            reportOptions:
+              suffix: $          
+          smoking_prevalence_index:
+            description: 'Index that indicates the amount of people smoking in a country'
+            column: smoking_prevalence
+            category: country_specific_indices
+            aggregation: average
+          diabetes_prevalence_index:
+            description: 'Index that indicates the amount of people that have diabetes in a country'
+            column: diabetes_prevalence
+            category: country_specific_indices
+            aggregation: average
+          infant_mortality_rate:
+            description: 'Infant mortality rate (IMR) is the number of deaths per 1,000 live births of children under one year of age'
+            column: infant_mortality_rate
+            category: country_specific_indices
+            aggregation: average
+          nurses_per_1000_people:
+            column: nurses_per_1000
+            category: country_specific_indices
+            aggregation: average
+          physicians_per_1000_people:
+            column: physicians_per_1000
+            category: country_specific_indices
+            aggregation: average
+          hospital_beds_per_1000_people:
+            column: hospital_beds_per_1000
+            category: country_specific_indices
+            aggregation: average
+          health_expenditure:
+            description: 'Health expenditure includes all expenditures for the provision of health services, family planning activities, nutrition activities and emergency aid designated for health, but it excludes the provision of drinking water and sanitation. Health financing is a critical component of health systems.'
+            column: health_expenditure_usd 
+            aggregation: average
+            category: country_specific_indices
+            reportOptions:
+              prefix: $
+          out_of_pocket_health_expenditure:
+            description: 'Out-of-pocket payments are expenditures borne directly by a patient where insurance does not cover the full cost of the health good or service'
+            column: out_of_pocket_health_expenditure_usd 
+            aggregation: average
+            category: country_specific_indices
+            reportOptions:
+              prefix: $
+          human_development_index:
+            description: 'The Human Development Index (HDI) is a summary measure of average achievement in key dimensions of human development: a long and healthy life, being knowledgeable and have a decent standard of living.'
+            column: human_development_index
+            aggregation: average
+            category: country_specific_indices
+          
+          human_capital_index:
+            description: 'The Index measures which countries are best in mobilizing the economic and professional potential of its citizens. The index measures how much capital each country loses through lack of education and health.'
+            column: human_capital_index
+            aggregation: average
+            category: country_specific_indices
+          life_expectancy:
+            column: life_expectancy
+            aggregation: average
+            category: country_specific_indices
+          pollution_mortality_rate:
+            description: 'Mortality rate attributed to different kinds of pollution'
+            column: pollution_mortality_rate
+            aggregation: average
+            category: country_specific_indices
+          
+          stringency_index:
+            sql: cast(stringency_index as float64)
+            description: 'This is a composite measure based on nine response indicators including school closures, workplace closures, and travel bans, rescaled to a value from 0 to 100 (100 = strictest)'
+            aggregation: average
+            category: country_specific_indices
 
 
-        average_temperature:
-          column: average_temperature_celsius
-          aggregation: average
-          category: country_climate_properties
-          reportOptions:
-            suffix: °C
-        minimum_temperature:
-          column: minimum_temperature_celsius
-          aggregation: average
-          category: country_climate_properties
-          reportOptions:
-            suffix: °C
-        maximum_temperature:
-          column: maximum_temperature_celsius
-          aggregation: average
-          category: country_climate_properties
-          reportOptions:
-            suffix: °C
-        rainfall:
-          column: rainfall_mm
-          aggregation: average
-          category: country_climate_properties
-          reportOptions:
-            suffix: mm
-        snowfall:
-          column: snowfall_mm
-          aggregation: average
-          category: country_climate_properties
-          reportOptions:
-            suffix: mm
-        dew_point:
-          column: dew_point
-          aggregation: average
-          category: country_climate_properties
-          reportOptions:
-            suffix: °C
-        relative_humidity:
-          column: relative_humidity
-          aggregation: average
-          category: country_climate_properties
+          total_population:
+            column: population
+            aggregation: average
+            category: country_population_properties
+          population_in_the_largest_city:
+            column: population_largest_city
+            aggregation: average
+            category: country_population_properties
+          total_population_rural_areas:
+            column: population_rural
+            aggregation: average
+            category: country_population_properties
+          total_population_urban_areas:
+            column: population_urban
+            aggregation: average
+            category: country_population_properties
+          population_density:
+            column: population_density
+            aggregation: average
+            category: country_population_properties
+          population_aged_0_to_9_years:
+            column: population_age_00_09
+            aggregation: average
+            category: country_population_properties
+          population_aged_10_to_19_years:
+            column: population_age_10_19
+            aggregation: average
+            category: country_population_properties
+          population_aged_20_to_29_years:
+            column: population_age_20_29
+            aggregation: average
+            category: country_population_properties
+          population_aged_30_to_39_years:
+            column: population_age_30_39
+            aggregation: average
+            category: country_population_properties
+          population_aged_40_to_49_years:
+            column: population_age_40_49
+            aggregation: average
+            category: country_population_properties
+          population_aged_50_to_59_years:
+            column: population_age_50_59
+            aggregation: average
+            category: country_population_properties
+          population_aged_60_to_69_years:
+            column: population_age_60_69
+            aggregation: average
+            category: country_population_properties
+          population_aged_70_to_79_years:
+            column: population_age_70_79
+            aggregation: average
+            category: country_population_properties
+          population_aged_80_and_older:
+            column: population_age_80_and_older
+            aggregation: average
+            category: country_population_properties
+
+
+          average_temperature:
+            column: average_temperature_celsius
+            aggregation: average
+            category: country_climate_properties
+            reportOptions:
+              suffix: °C
+          minimum_temperature:
+            column: minimum_temperature_celsius
+            aggregation: average
+            category: country_climate_properties
+            reportOptions:
+              suffix: °C
+          maximum_temperature:
+            column: maximum_temperature_celsius
+            aggregation: average
+            category: country_climate_properties
+            reportOptions:
+              suffix: °C
+          rainfall:
+            column: rainfall_mm
+            aggregation: average
+            category: country_climate_properties
+            reportOptions:
+              suffix: mm
+          snowfall:
+            column: snowfall_mm
+            aggregation: average
+            category: country_climate_properties
+            reportOptions:
+              suffix: mm
+          dew_point:
+            column: dew_point
+            aggregation: average
+            category: country_climate_properties
+            reportOptions:
+              suffix: °C
+          relative_humidity:
+            column: relative_humidity
+            aggregation: average
+            category: country_climate_properties
 
             
 
