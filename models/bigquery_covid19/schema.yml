@@ -13,7 +13,7 @@ models:
           dimension:
             type: 'timestamp'
     meta:
-      label: Covid
+      label: Country Level Covid
       name: test
       dimensions:
         restrictions_on_gatherings:
