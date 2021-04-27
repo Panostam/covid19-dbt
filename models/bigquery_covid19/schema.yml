@@ -1,9 +1,19 @@
 version: 2
 
 models:
-  - name: covid
+  - name: test
     description: 'Covid19 Public Bigquery data'
+    columns:
+      - name: country_name
+        meta:
+          dimension:
+            type: 'string'
+      - name: date
+        meta:
+          dimension:
+            type: 'timestamp'
     meta:
+      label: Covid
       dimensions:
         restrictions_on_gatherings:
           description: 'The level of restrictions regarding the amount of people allowed in the same place'
@@ -390,26 +400,6 @@ models:
           column: relative_humidity
           aggregation: average
           category: country_climate_properties
-            
-         
-    
-    columns:
-      - name: country_name
-        meta:
-          dimension:
-            type: 'string'
-      - name: date
-        meta:
-          dimension:
-            type: 'timestamp'
-
-
-
-
-
-
-
-
 
             
 
