@@ -10,7 +10,7 @@ models:
             column: country_name
             type: string
       - name: date
-        meta:
+        meta: 
           rakam.dimension:
             column: date
             type: timestamp
