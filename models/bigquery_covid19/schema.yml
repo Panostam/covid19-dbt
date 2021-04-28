@@ -18,9 +18,6 @@ models:
         name: test
         dimensions:
 
-          date:
-            type: 'timestamp'
-            
           restrictions_on_gatherings:
             description: 'The level of restrictions regarding the amount of people allowed in the same place'
             type: string
