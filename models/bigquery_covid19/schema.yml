@@ -7,11 +7,11 @@ models:
       - name: country_name 
         meta: 
           rakam.dimension:
-            type: 'string'
+            type: string
       - name: date
         meta:
           rakam.dimension:
-            type: 'timestamp'
+            type: timestamp
     meta:
       rakam:
         label: Country Level Covid
