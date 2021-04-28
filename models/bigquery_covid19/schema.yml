@@ -1,14 +1,14 @@
 version: 2
 
 models:
-  - name: covid
+  - name: covid 
     description: 'Covid19 Public Bigquery data'
     columns:
       - name: country_name 
         meta: 
           rakam.dimension:
             column: country_name
-            type: string 
+            type: string
       - name: date
         meta:
           rakam.dimension:
