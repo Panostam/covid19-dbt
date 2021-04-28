@@ -4,7 +4,7 @@ models:
   - name: covid 
     description: 'Covid19 Public Bigquery data'
     columns:
-      - name: country_name 
+      - name: country_name  
         meta: 
           rakam.dimension:
             column: country_name
