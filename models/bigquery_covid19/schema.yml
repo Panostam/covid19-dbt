@@ -7,10 +7,12 @@ models:
       - name: country_name 
         meta: 
           rakam.dimension:
+            column: country_name
             type: string
       - name: date
         meta:
           rakam.dimension:
+            column: date
             type: timestamp
     meta:
       rakam:
