@@ -8,7 +8,7 @@ models:
         meta: 
           rakam.dimension:
             column: country_name
-            type: string
+            type: string 
       - name: date
         meta:
           rakam.dimension:
