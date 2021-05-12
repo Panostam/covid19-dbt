@@ -101,7 +101,7 @@ models:
             description: 'Amount of people who are fully vaccinated normalized by the country population'
             sql: CASE 
               WHEN country_name = 'Germany'  THEN 9.4
-              WHEN country_name = 'Gibraltar' THEN 95.6
+              WHEN country_name = 'Gibraltar' THEN 95.651223
               
               ELSE 100*IEEE_DIVIDE(sum(new_persons_fully_vaccinated),avg(population))
               END
